@@ -1,0 +1,796 @@
+08:05:24 | INFO    | Pre-flight check: all systems go.
+08:05:24 | INFO    | Sending test email to kaushika13semwal@gmail.com...
+08:05:28 | INFO    | Test email sent to kaushika13semwal@gmail.com
+08:11:29 | INFO    | Pre-flight check: all systems go.
+08:11:29 | INFO    |   Pipeline:  news_fetcher.py → content_generator.py → SMTP
+08:11:29 | INFO    |   Template:  newspaper_template.html
+08:11:29 | INFO    |   Feeds:     d:\newspaper\data\datasets
+08:11:29 | INFO    |   Editions:  D:\newspaper\data\editions
+08:11:29 | INFO    |   Delivery:  kaushika13semwal@gmail.com
+08:11:29 | INFO    |   SMTP:      smtp.gmail.com:587 (TLS)
+08:11:29 | INFO    |   LLM:       Gemini
+08:11:52 | INFO    | Pre-flight check: all systems go.
+08:11:52 | INFO    |   Pipeline:  news_fetcher.py → content_generator.py → SMTP
+08:11:52 | INFO    |   Template:  newspaper_template.html
+08:11:52 | INFO    |   Feeds:     d:\newspaper\data\datasets
+08:11:52 | INFO    |   Editions:  D:\newspaper\data\editions
+08:11:52 | INFO    |   Delivery:  kaushika13semwal@gmail.com
+08:11:52 | INFO    |   SMTP:      smtp.gmail.com:587 (TLS)
+08:11:52 | INFO    |   LLM:       Gemini
+08:11:52 | INFO    | Sending test email to kaushika13semwal@gmail.com...
+08:11:52 | INFO    |   SMTP attempt 1/3 → smtp.gmail.com:587
+08:11:53 | INFO    |   TLS established, authenticating...
+08:11:56 | INFO    |   Email delivered to kaushika13semwal@gmail.com
+08:12:12 | INFO    | Installing Windows Scheduled Task...
+08:12:12 | INFO    |   Task Name:  TheDailyScoopPipeline
+08:12:12 | INFO    |   Schedule:   Daily at 07:30
+08:12:12 | INFO    |   Command:    D:\newspaper\.venv\Scripts\python.exe D:\newspaper\cron_delivery.py
+08:12:13 | INFO    |   Task 'TheDailyScoopPipeline' installed successfully!
+08:12:13 | INFO    |   The pipeline will run every day at 07:30.
+08:12:13 | INFO    |   To verify: schtasks /Query /TN TheDailyScoopPipeline
+08:12:13 | INFO    |   To remove: schtasks /Delete /TN TheDailyScoopPipeline /F
+08:13:18 | INFO    | Pre-flight check: all systems go.
+08:13:18 | INFO    |   Pipeline:  news_fetcher.py → content_generator.py → SMTP
+08:13:18 | INFO    |   Template:  newspaper_template.html
+08:13:18 | INFO    |   Feeds:     d:\newspaper\data\datasets
+08:13:18 | INFO    |   Editions:  D:\newspaper\data\editions
+08:13:18 | INFO    |   Delivery:  kaushika13semwal@gmail.com
+08:13:18 | INFO    |   SMTP:      smtp.gmail.com:587 (TLS)
+08:13:18 | INFO    |   LLM:       Gemini
+08:13:18 | INFO    | ========================================================
+08:13:18 | INFO    |   PIPELINE START: Tuesday, June 30, 2026 at 08:13:18 IST
+08:13:18 | INFO    | ========================================================
+08:13:18 | INFO    | STEP 0/4: Verifying component hookup...
+08:13:18 | INFO    |   Template OK: newspaper_template.html (28.4 KB)
+08:13:18 | INFO    |   All components verified and hooked up.
+08:13:18 | INFO    | STEP 1/4: Fetching news data...
+08:13:18 | INFO    |   Feed exists but is stale (238.6h old). Re-fetching...
+08:13:18 | INFO    |   [Fetch] Running: D:\newspaper\.venv\Scripts\python.exe D:\newspaper\news_fetcher.py
+08:14:23 | INFO    |   [Fetch] +----------------------------------------------+
+08:14:23 | INFO    |   [Fetch]   |        DAILY NEWSPAPER FETCHER               |
+08:14:23 | INFO    |   [Fetch]   |        Date:  2026-06-30                    |
+08:14:23 | INFO    |   [Fetch]   |        Time:  08:13:19 IST                  |
+08:14:23 | INFO    |   [Fetch]   +----------------------------------------------+
+08:14:23 | INFO    |   [Fetch] 
+08:14:23 | INFO    |   [Fetch] 
+08:14:23 | INFO    |   [Fetch]   +---------------------------------------------+
+08:14:23 | INFO    |   [Fetch]   |              FETCH SUMMARY                  |
+08:14:23 | INFO    |   [Fetch]   +---------------------------------------------+
+08:14:23 | INFO    |   [Fetch]   |  Domestic Tea:     15 articles     [ success]  |
+08:14:23 | INFO    |   [Fetch]   |  Global Gossip:    16 articles     [ success]  |
+08:14:23 | INFO    |   [Fetch]   |  Word of the Day:   Y              [ success]  |
+08:14:23 | INFO    |   [Fetch]   |  Bag Check:         5 funds        [fallback]  |
+08:14:23 | INFO    |   [Fetch]   +---------------------------------------------+
+08:14:23 | INFO    |   [Fetch] OK
+08:14:23 | INFO    |   Feed validated: newspaper_feed_2026-06-30.json (0.0h old)
+08:14:23 | INFO    | STEP 2/4: Generating content via LLM...
+08:14:23 | INFO    |   Template source: newspaper_template.html
+08:14:23 | INFO    |   Feed source: newspaper_feed_2026-06-30.json
+08:14:23 | INFO    |   [Generate] Running: D:\newspaper\.venv\Scripts\python.exe D:\newspaper\content_generator.py
+08:14:31 | INFO    |   [Generate] +----------------------------------------------+
+08:14:31 | INFO    |   [Generate]   |      THE DAILY SCOOP -- CONTENT GENERATOR    |
+08:14:31 | INFO    |   [Generate]   |      Date: 2026-06-30                       |
+08:14:31 | INFO    |   [Generate]   |      Time: 08:14:26 IST                     |
+08:14:31 | INFO    |   [Generate]   +----------------------------------------------+
+08:14:31 | INFO    |   [Generate] 
+08:14:31 | INFO    |   [Generate] 
+08:14:31 | INFO    |   [Generate]   +---------------------------------------------+
+08:14:31 | INFO    |   [Generate]   |            GENERATION SUMMARY               |
+08:14:31 | INFO    |   [Generate]   +---------------------------------------------+
+08:14:31 | INFO    |   [Generate]   |  Morning Brew:       1799 chars              |
+08:14:31 | INFO    |   [Generate]   |  Domestic Dispatch:   1800 chars              |
+08:14:31 | INFO    |   [Generate]   |  Global Gossip:      1800 chars              |
+08:14:31 | INFO    |   [Generate]   |  Bag Check:          1800 chars              |
+08:14:31 | INFO    |   [Generate]   |  Word Example:       1799 chars              |
+08:14:31 | INFO    |   [Generate]   |  Hot Take:           1800 chars              |
+08:14:31 | INFO    |   [Generate]   |  LLM Provider:          gemini              |
+08:14:31 | INFO    |   [Generate]   +---------------------------------------------+
+08:14:31 | INFO    |   [Generate]   |  Output: D:\newspaper\data\editions\the_daily_scoop_2026-06-30.html|
+08:14:31 | INFO    |   [Generate]   +---------------------------------------------+
+08:14:31 | INFO    |   [Generate] OK
+08:14:31 | INFO    |   Found today's edition: the_daily_scoop_2026-06-30.html
+08:14:31 | INFO    | STEP 3/4: Delivering via secure SMTP...
+08:14:31 | INFO    |   Edition: the_daily_scoop_2026-06-30.html (43.3 KB)
+08:14:31 | INFO    |   Recipient: kaushika13semwal@gmail.com
+08:14:31 | INFO    |   SMTP: smtp.gmail.com:587 (TLS)
+08:14:31 | INFO    |   Preparing email to: kaushika13semwal@gmail.com
+08:14:31 | INFO    |   Subject: The Daily Scoop — Tuesday, June 30, 2026
+08:14:31 | INFO    |   Edition file: the_daily_scoop_2026-06-30.html (43.3 KB)
+08:14:31 | INFO    |   SMTP attempt 1/3 → smtp.gmail.com:587
+08:14:32 | INFO    |   TLS established, authenticating...
+08:14:36 | INFO    |   Email delivered to kaushika13semwal@gmail.com
+08:23:09 | INFO    | Pre-flight check: all systems go.
+08:23:09 | INFO    |   Pipeline:  news_fetcher.py → content_generator.py → SMTP
+08:23:09 | INFO    |   Template:  newspaper_template.html
+08:23:09 | INFO    |   Feeds:     d:\newspaper\data\datasets
+08:23:09 | INFO    |   Editions:  D:\newspaper\data\editions
+08:23:09 | INFO    |   Delivery:  kaushika13semwal@gmail.com
+08:23:09 | INFO    |   SMTP:      smtp.gmail.com:587 (TLS)
+08:23:09 | INFO    |   LLM:       Gemini (2 keys configured)
+08:23:09 | INFO    | ========================================================
+08:23:09 | INFO    |   PIPELINE START: Tuesday, June 30, 2026 at 08:23:09 IST
+08:23:09 | INFO    | ========================================================
+08:23:09 | INFO    | STEP 0/4: Verifying component hookup...
+08:23:09 | INFO    |   Template OK: newspaper_template.html (28.4 KB)
+08:23:09 | INFO    |   All components verified and hooked up.
+08:23:09 | INFO    | STEP 1/4: Fetching news data...
+08:23:09 | INFO    |   Fresh feed found (0.1h old). Skipping re-fetch.
+08:23:09 | INFO    |   Feed validated: newspaper_feed_2026-06-30.json (0.1h old)
+08:23:09 | INFO    | STEP 2/4: Generating content via LLM...
+08:23:09 | INFO    |   Template source: newspaper_template.html
+08:23:09 | INFO    |   Feed source: newspaper_feed_2026-06-30.json
+08:23:09 | INFO    |   [Generate] Running: D:\newspaper\.venv\Scripts\python.exe D:\newspaper\content_generator.py
+08:23:18 | INFO    |   [Generate] +----------------------------------------------+
+08:23:18 | INFO    |   [Generate]   |      THE DAILY SCOOP -- CONTENT GENERATOR    |
+08:23:18 | INFO    |   [Generate]   |      Date: 2026-06-30                       |
+08:23:18 | INFO    |   [Generate]   |      Time: 08:23:13 IST                     |
+08:23:18 | INFO    |   [Generate]   +----------------------------------------------+
+08:23:18 | INFO    |   [Generate] 
+08:23:18 | INFO    |   [Generate] 
+08:23:18 | INFO    |   [Generate]   +---------------------------------------------+
+08:23:18 | INFO    |   [Generate]   |            GENERATION SUMMARY               |
+08:23:18 | INFO    |   [Generate]   +---------------------------------------------+
+08:23:18 | INFO    |   [Generate]   |  Morning Brew:         51 chars              |
+08:23:18 | INFO    |   [Generate]   |  Domestic Dispatch:     51 chars              |
+08:23:18 | INFO    |   [Generate]   |  Global Gossip:        51 chars              |
+08:23:18 | INFO    |   [Generate]   |  Bag Check:            51 chars              |
+08:23:18 | INFO    |   [Generate]   |  Word Example:         51 chars              |
+08:23:18 | INFO    |   [Generate]   |  Hot Take:             51 chars              |
+08:23:18 | INFO    |   [Generate]   |  LLM Provider:          gemini              |
+08:23:18 | INFO    |   [Generate]   +---------------------------------------------+
+08:23:18 | INFO    |   [Generate]   |  Output: D:\newspaper\data\editions\the_daily_scoop_2026-06-30.html|
+08:23:18 | INFO    |   [Generate]   +---------------------------------------------+
+08:23:18 | INFO    |   [Generate] OK
+08:23:18 | INFO    |   Found today's edition: the_daily_scoop_2026-06-30.html
+08:23:18 | INFO    | STEP 3/4: Delivering via secure SMTP...
+08:23:18 | INFO    |   Edition: the_daily_scoop_2026-06-30.html (29.2 KB)
+08:23:18 | INFO    |   Recipient: kaushika13semwal@gmail.com
+08:23:18 | INFO    |   SMTP: smtp.gmail.com:587 (TLS)
+08:23:18 | INFO    |   Preparing email to: kaushika13semwal@gmail.com
+08:23:18 | INFO    |   Subject: The Daily Scoop — Tuesday, June 30, 2026
+08:23:18 | INFO    |   Edition file: the_daily_scoop_2026-06-30.html (29.2 KB)
+08:23:18 | INFO    |   SMTP attempt 1/3 → smtp.gmail.com:587
+08:23:20 | INFO    |   TLS established, authenticating...
+08:23:22 | INFO    |   Email delivered to kaushika13semwal@gmail.com
+08:27:26 | INFO    | Pre-flight check: all systems go.
+08:27:26 | INFO    |   Pipeline:  news_fetcher.py → content_generator.py → SMTP
+08:27:26 | INFO    |   Template:  newspaper_template.html
+08:27:26 | INFO    |   Feeds:     d:\newspaper\data\datasets
+08:27:26 | INFO    |   Editions:  D:\newspaper\data\editions
+08:27:26 | INFO    |   Delivery:  kaushika13semwal@gmail.com
+08:27:26 | INFO    |   SMTP:      smtp.gmail.com:587 (TLS)
+08:27:26 | INFO    |   LLM:       Gemini (2 keys configured)
+08:27:26 | INFO    | ========================================================
+08:27:26 | INFO    |   PIPELINE START: Tuesday, June 30, 2026 at 08:27:26 IST
+08:27:26 | INFO    | ========================================================
+08:27:26 | INFO    | STEP 0/4: Verifying component hookup...
+08:27:26 | INFO    |   Template OK: newspaper_template.html (28.4 KB)
+08:27:26 | INFO    |   All components verified and hooked up.
+08:27:26 | INFO    | STEP 1/4: Fetching news data...
+08:27:26 | INFO    |   Fresh feed found (0.2h old). Skipping re-fetch.
+08:27:26 | INFO    |   Feed validated: newspaper_feed_2026-06-30.json (0.2h old)
+08:27:26 | INFO    | STEP 2/4: Generating content via LLM...
+08:27:26 | INFO    |   Template source: newspaper_template.html
+08:27:26 | INFO    |   Feed source: newspaper_feed_2026-06-30.json
+08:27:26 | INFO    |   [Generate] Running: D:\newspaper\.venv\Scripts\python.exe D:\newspaper\content_generator.py
+08:27:35 | INFO    |   [Generate] +----------------------------------------------+
+08:27:35 | INFO    |   [Generate]   |      THE DAILY SCOOP -- CONTENT GENERATOR    |
+08:27:35 | INFO    |   [Generate]   |      Date: 2026-06-30                       |
+08:27:35 | INFO    |   [Generate]   |      Time: 08:27:29 IST                     |
+08:27:35 | INFO    |   [Generate]   +----------------------------------------------+
+08:27:35 | INFO    |   [Generate] 
+08:27:35 | INFO    |   [Generate] 
+08:27:35 | INFO    |   [Generate]   +---------------------------------------------+
+08:27:35 | INFO    |   [Generate]   |            GENERATION SUMMARY               |
+08:27:35 | INFO    |   [Generate]   +---------------------------------------------+
+08:27:35 | INFO    |   [Generate]   |  Morning Brew:         51 chars              |
+08:27:35 | INFO    |   [Generate]   |  Domestic Dispatch:     51 chars              |
+08:27:35 | INFO    |   [Generate]   |  Global Gossip:        51 chars              |
+08:27:35 | INFO    |   [Generate]   |  Bag Check:            51 chars              |
+08:27:35 | INFO    |   [Generate]   |  Word Example:         51 chars              |
+08:27:35 | INFO    |   [Generate]   |  Hot Take:             51 chars              |
+08:27:35 | INFO    |   [Generate]   |  LLM Provider:          gemini              |
+08:27:35 | INFO    |   [Generate]   +---------------------------------------------+
+08:27:35 | INFO    |   [Generate]   |  Output: D:\newspaper\data\editions\the_daily_scoop_2026-06-30.html|
+08:27:35 | INFO    |   [Generate]   +---------------------------------------------+
+08:27:35 | INFO    |   [Generate] OK
+08:27:35 | INFO    |   Found today's edition: the_daily_scoop_2026-06-30.html
+08:27:35 | INFO    | STEP 3/4: Delivering via secure SMTP...
+08:27:35 | INFO    |   Edition: the_daily_scoop_2026-06-30.html (29.2 KB)
+08:27:35 | INFO    |   Recipient: kaushika13semwal@gmail.com
+08:27:35 | INFO    |   SMTP: smtp.gmail.com:587 (TLS)
+08:27:35 | INFO    |   Preparing email to: kaushika13semwal@gmail.com
+08:27:35 | INFO    |   Subject: The Daily Scoop — Tuesday, June 30, 2026
+08:27:35 | INFO    |   Edition file: the_daily_scoop_2026-06-30.html (29.2 KB)
+08:27:35 | INFO    |   SMTP attempt 1/3 → smtp.gmail.com:587
+08:27:38 | INFO    |   TLS established, authenticating...
+08:27:40 | INFO    |   Email delivered to kaushika13semwal@gmail.com
+08:24:29 | INFO    | Pre-flight check: all systems go.
+08:24:29 | INFO    |   Pipeline:  news_fetcher.py → content_generator.py → SMTP
+08:24:29 | INFO    |   Template:  newspaper_template.html
+08:24:29 | INFO    |   Feeds:     d:\newspaper\data\datasets
+08:24:29 | INFO    |   Editions:  D:\newspaper\data\editions
+08:24:29 | INFO    |   Delivery:  kaushika13semwal@gmail.com
+08:24:29 | INFO    |   SMTP:      smtp.gmail.com:587 (TLS)
+08:24:29 | INFO    |   LLM:       Gemini (2 keys configured)
+08:24:29 | INFO    | ========================================================
+08:24:29 | INFO    |   PIPELINE START: Wednesday, July 01, 2026 at 08:24:29 IST
+08:24:29 | INFO    | ========================================================
+08:24:29 | INFO    | STEP 0/4: Verifying component hookup...
+08:24:29 | INFO    |   Template OK: newspaper_template.html (28.4 KB)
+08:24:29 | INFO    |   All components verified and hooked up.
+08:24:29 | INFO    | STEP 1/4: Fetching news data...
+08:24:29 | INFO    |   Feed exists but is stale (24.2h old). Re-fetching...
+08:24:29 | INFO    |   [Fetch] Running: C:\Users\Dell INSPIRON\python.exe D:\newspaper\news_fetcher.py
+08:24:36 | INFO    |   [Fetch] +----------------------------------------------+
+08:24:36 | INFO    |   [Fetch]   |        DAILY NEWSPAPER FETCHER               |
+08:24:36 | INFO    |   [Fetch]   |        Date:  2026-07-01                    |
+08:24:36 | INFO    |   [Fetch]   |        Time:  08:24:30 IST                  |
+08:24:36 | INFO    |   [Fetch]   +----------------------------------------------+
+08:24:36 | INFO    |   [Fetch] 
+08:24:36 | INFO    |   [Fetch] 
+08:24:36 | INFO    |   [Fetch]   +---------------------------------------------+
+08:24:36 | INFO    |   [Fetch]   |              FETCH SUMMARY                  |
+08:24:36 | INFO    |   [Fetch]   +---------------------------------------------+
+08:24:36 | INFO    |   [Fetch]   |  Domestic Tea:     15 articles     [ success]  |
+08:24:36 | INFO    |   [Fetch]   |  Global Gossip:    16 articles     [ success]  |
+08:24:36 | INFO    |   [Fetch]   |  Word of the Day:   Y              [ success]  |
+08:24:36 | INFO    |   [Fetch]   |  Bag Check:         5 funds        [fallback]  |
+08:24:36 | INFO    |   [Fetch]   +---------------------------------------------+
+08:24:36 | INFO    |   [Fetch] OK
+08:24:36 | INFO    |   Feed validated: newspaper_feed_2026-07-01.json (0.0h old)
+08:24:36 | INFO    | STEP 2/4: Generating content via LLM...
+08:24:36 | INFO    |   Template source: newspaper_template.html
+08:24:36 | INFO    |   Feed source: newspaper_feed_2026-07-01.json
+08:24:36 | INFO    |   [Generate] Running: C:\Users\Dell INSPIRON\python.exe D:\newspaper\content_generator.py
+08:25:00 | INFO    |   [Generate] +----------------------------------------------+
+08:25:00 | INFO    |   [Generate]   |      THE DAILY SCOOP -- CONTENT GENERATOR    |
+08:25:00 | INFO    |   [Generate]   |      Date: 2026-07-01                       |
+08:25:00 | INFO    |   [Generate]   |      Time: 08:24:54 IST                     |
+08:25:00 | INFO    |   [Generate]   +----------------------------------------------+
+08:25:00 | INFO    |   [Generate] 
+08:25:00 | INFO    |   [Generate] 
+08:25:00 | INFO    |   [Generate]   +---------------------------------------------+
+08:25:00 | INFO    |   [Generate]   |            GENERATION SUMMARY               |
+08:25:00 | INFO    |   [Generate]   +---------------------------------------------+
+08:25:00 | INFO    |   [Generate]   |  Morning Brew:         51 chars              |
+08:25:00 | INFO    |   [Generate]   |  Domestic Dispatch:     51 chars              |
+08:25:00 | INFO    |   [Generate]   |  Global Gossip:        51 chars              |
+08:25:00 | INFO    |   [Generate]   |  Bag Check:            51 chars              |
+08:25:00 | INFO    |   [Generate]   |  Word Example:         51 chars              |
+08:25:00 | INFO    |   [Generate]   |  Hot Take:             51 chars              |
+08:25:00 | INFO    |   [Generate]   |  LLM Provider:          gemini              |
+08:25:00 | INFO    |   [Generate]   +---------------------------------------------+
+08:25:00 | INFO    |   [Generate]   |  Output: D:\newspaper\data\editions\the_daily_scoop_2026-07-01.html|
+08:25:00 | INFO    |   [Generate]   +---------------------------------------------+
+08:25:00 | INFO    |   [Generate] OK
+08:25:00 | INFO    |   Found today's edition: the_daily_scoop_2026-07-01.html
+08:25:00 | INFO    | STEP 3/4: Delivering via secure SMTP...
+08:25:00 | INFO    |   Edition: the_daily_scoop_2026-07-01.html (29.3 KB)
+08:25:00 | INFO    |   Recipient: kaushika13semwal@gmail.com
+08:25:00 | INFO    |   SMTP: smtp.gmail.com:587 (TLS)
+08:25:00 | INFO    |   Preparing email to: kaushika13semwal@gmail.com
+08:25:00 | INFO    |   Subject: The Daily Scoop — Wednesday, July 01, 2026
+08:25:00 | INFO    |   Edition file: the_daily_scoop_2026-07-01.html (29.3 KB)
+08:25:00 | INFO    |   SMTP attempt 1/3 → smtp.gmail.com:587
+08:25:02 | INFO    |   TLS established, authenticating...
+08:25:05 | INFO    |   Email delivered to kaushika13semwal@gmail.com
+08:32:44 | INFO    | Pre-flight check: all systems go.
+08:32:44 | INFO    |   Pipeline:  news_fetcher.py → content_generator.py → SMTP
+08:32:44 | INFO    |   Template:  newspaper_template.html
+08:32:44 | INFO    |   Feeds:     d:\newspaper\data\datasets
+08:32:44 | INFO    |   Editions:  D:\newspaper\data\editions
+08:32:44 | INFO    |   Delivery:  kaushika13semwal@gmail.com
+08:32:44 | INFO    |   SMTP:      smtp.gmail.com:587 (TLS)
+08:32:44 | INFO    |   LLM:       Gemini (2 keys configured)
+08:32:44 | INFO    | ========================================================
+08:32:44 | INFO    |   PIPELINE START: Wednesday, July 01, 2026 at 08:32:44 IST
+08:32:44 | INFO    | ========================================================
+08:32:44 | INFO    | STEP 0/4: Verifying component hookup...
+08:32:44 | INFO    |   Template OK: newspaper_template.html (28.4 KB)
+08:32:44 | INFO    |   All components verified and hooked up.
+08:32:44 | INFO    | STEP 1/4: Fetching news data...
+08:32:44 | INFO    |   Fresh feed found (0.1h old). Skipping re-fetch.
+08:32:44 | INFO    |   Feed validated: newspaper_feed_2026-07-01.json (0.1h old)
+08:32:44 | INFO    | STEP 2/4: Generating content via LLM...
+08:32:44 | INFO    |   Template source: newspaper_template.html
+08:32:44 | INFO    |   Feed source: newspaper_feed_2026-07-01.json
+08:32:44 | INFO    |   [Generate] Running: C:\Users\Dell INSPIRON\python.exe D:\newspaper\content_generator.py
+08:33:06 | INFO    |   [Generate] +----------------------------------------------+
+08:33:06 | INFO    |   [Generate]   |      THE DAILY SCOOP -- CONTENT GENERATOR    |
+08:33:06 | INFO    |   [Generate]   |      Date: 2026-07-01                       |
+08:33:06 | INFO    |   [Generate]   |      Time: 08:33:00 IST                     |
+08:33:06 | INFO    |   [Generate]   +----------------------------------------------+
+08:33:06 | INFO    |   [Generate] 
+08:33:06 | INFO    |   [Generate] 
+08:33:06 | INFO    |   [Generate]   +---------------------------------------------+
+08:33:06 | INFO    |   [Generate]   |            GENERATION SUMMARY               |
+08:33:06 | INFO    |   [Generate]   +---------------------------------------------+
+08:33:06 | INFO    |   [Generate]   |  Morning Brew:        286 chars              |
+08:33:06 | INFO    |   [Generate]   |  Domestic Dispatch:    286 chars              |
+08:33:06 | INFO    |   [Generate]   |  Global Gossip:       286 chars              |
+08:33:06 | INFO    |   [Generate]   |  Bag Check:           286 chars              |
+08:33:06 | INFO    |   [Generate]   |  Word Example:        286 chars              |
+08:33:06 | INFO    |   [Generate]   |  Hot Take:            286 chars              |
+08:33:06 | INFO    |   [Generate]   |  LLM Provider:          gemini              |
+08:33:06 | INFO    |   [Generate]   +---------------------------------------------+
+08:33:06 | INFO    |   [Generate]   |  Output: D:\newspaper\data\editions\the_daily_scoop_2026-07-01.html|
+08:33:06 | INFO    |   [Generate]   +---------------------------------------------+
+08:33:06 | INFO    |   [Generate] OK
+08:33:06 | INFO    |   Found today's edition: the_daily_scoop_2026-07-01.html
+08:33:06 | INFO    | STEP 3/4: Delivering via secure SMTP...
+08:33:06 | INFO    |   Edition: the_daily_scoop_2026-07-01.html (31.2 KB)
+08:33:06 | INFO    |   Recipient: kaushika13semwal@gmail.com
+08:33:06 | INFO    |   SMTP: smtp.gmail.com:587 (TLS)
+08:33:06 | INFO    |   Preparing email to: kaushika13semwal@gmail.com
+08:33:06 | INFO    |   Subject: The Daily Scoop — Wednesday, July 01, 2026
+08:33:06 | INFO    |   Edition file: the_daily_scoop_2026-07-01.html (31.2 KB)
+08:33:06 | INFO    |   SMTP attempt 1/3 → smtp.gmail.com:587
+08:33:07 | INFO    |   TLS established, authenticating...
+08:33:10 | INFO    |   Email delivered to kaushika13semwal@gmail.com
+08:41:06 | INFO    | Pre-flight check: all systems go.
+08:41:06 | INFO    |   Pipeline:  news_fetcher.py → content_generator.py → SMTP
+08:41:06 | INFO    |   Template:  newspaper_template.html
+08:41:06 | INFO    |   Feeds:     d:\newspaper\data\datasets
+08:41:06 | INFO    |   Editions:  D:\newspaper\data\editions
+08:41:06 | INFO    |   Delivery:  kaushika13semwal@gmail.com
+08:41:06 | INFO    |   SMTP:      smtp.gmail.com:587 (TLS)
+08:41:06 | INFO    |   LLM:       Gemini (2 keys configured)
+08:41:06 | INFO    | ========================================================
+08:41:06 | INFO    |   PIPELINE START: Wednesday, July 01, 2026 at 08:41:06 IST
+08:41:06 | INFO    | ========================================================
+08:41:06 | INFO    | STEP 0/4: Verifying component hookup...
+08:41:06 | INFO    |   Template OK: newspaper_template.html (28.4 KB)
+08:41:06 | INFO    |   All components verified and hooked up.
+08:41:06 | INFO    | STEP 1/4: Fetching news data...
+08:41:06 | INFO    |   Fresh feed found (0.3h old). Skipping re-fetch.
+08:41:06 | INFO    |   Feed validated: newspaper_feed_2026-07-01.json (0.3h old)
+08:41:06 | INFO    | STEP 2/4: Generating content via LLM...
+08:41:06 | INFO    |   Template source: newspaper_template.html
+08:41:06 | INFO    |   Feed source: newspaper_feed_2026-07-01.json
+08:41:06 | INFO    |   [Generate] Running: C:\Users\Dell INSPIRON\python.exe D:\newspaper\content_generator.py
+08:41:20 | INFO    |   [Generate] +----------------------------------------------+
+08:41:20 | INFO    |   [Generate]   |      THE DAILY SCOOP -- CONTENT GENERATOR    |
+08:41:20 | INFO    |   [Generate]   |      Date: 2026-07-01                       |
+08:41:20 | INFO    |   [Generate]   |      Time: 08:41:12 IST                     |
+08:41:20 | INFO    |   [Generate]   +----------------------------------------------+
+08:41:20 | INFO    |   [Generate] 
+08:41:20 | INFO    |   [Generate] 
+08:41:20 | INFO    |   [Generate]   +---------------------------------------------+
+08:41:20 | INFO    |   [Generate]   |            GENERATION SUMMARY               |
+08:41:20 | INFO    |   [Generate]   +---------------------------------------------+
+08:41:20 | INFO    |   [Generate]   |  Morning Brew:        185 chars              |
+08:41:20 | INFO    |   [Generate]   |  Domestic Dispatch:    185 chars              |
+08:41:20 | INFO    |   [Generate]   |  Global Gossip:       185 chars              |
+08:41:20 | INFO    |   [Generate]   |  Bag Check:           185 chars              |
+08:41:20 | INFO    |   [Generate]   |  Word Example:        185 chars              |
+08:41:20 | INFO    |   [Generate]   |  Hot Take:            185 chars              |
+08:41:20 | INFO    |   [Generate]   |  LLM Provider:          claude              |
+08:41:20 | INFO    |   [Generate]   +---------------------------------------------+
+08:41:20 | INFO    |   [Generate]   |  Output: D:\newspaper\data\editions\the_daily_scoop_2026-07-01.html|
+08:41:20 | INFO    |   [Generate]   +---------------------------------------------+
+08:41:20 | INFO    |   [Generate] OK
+08:41:20 | INFO    |   Found today's edition: the_daily_scoop_2026-07-01.html
+08:41:20 | INFO    | STEP 3/4: Delivering via secure SMTP...
+08:41:20 | INFO    |   Edition: the_daily_scoop_2026-07-01.html (30.3 KB)
+08:41:20 | INFO    |   Recipient: kaushika13semwal@gmail.com
+08:41:20 | INFO    |   SMTP: smtp.gmail.com:587 (TLS)
+08:41:20 | INFO    |   Preparing email to: kaushika13semwal@gmail.com
+08:41:20 | INFO    |   Subject: The Daily Scoop — Wednesday, July 01, 2026
+08:41:20 | INFO    |   Edition file: the_daily_scoop_2026-07-01.html (30.3 KB)
+08:41:20 | INFO    |   SMTP attempt 1/3 → smtp.gmail.com:587
+08:41:22 | INFO    |   TLS established, authenticating...
+08:41:25 | INFO    |   Email delivered to kaushika13semwal@gmail.com
+18:52:58 | INFO    | Installing Windows Scheduled Task...
+18:52:58 | INFO    |   Task Name:  TheDailyScoopPipeline
+18:52:58 | INFO    |   Schedule:   Daily at 07:30
+18:52:58 | INFO    |   StartWhenAvailable: YES (catches missed runs)
+18:52:58 | INFO    |   Command:    D:\newspaper\.venv\Scripts\python.exe D:\newspaper\cron_delivery.py
+18:52:58 | INFO    |   Task 'TheDailyScoopPipeline' installed successfully!
+18:52:58 | INFO    |   The pipeline will run every day at 07:30.
+18:52:58 | INFO    |   If the PC is asleep, it will run as soon as it wakes up.
+18:52:58 | INFO    |   To verify: schtasks /Query /TN TheDailyScoopPipeline
+18:52:58 | INFO    |   To remove: schtasks /Delete /TN TheDailyScoopPipeline /F
+18:18:04 | INFO    | Pre-flight check: all systems go.
+18:18:04 | INFO    |   Pipeline:  news_fetcher.py → content_generator.py → SMTP
+18:18:04 | INFO    |   Template:  newspaper_template.html
+18:18:04 | INFO    |   Feeds:     d:\newspaper\data\datasets
+18:18:04 | INFO    |   Editions:  D:\newspaper\data\editions
+18:18:04 | INFO    |   Delivery:  kaushika13semwal@gmail.com
+18:18:04 | INFO    |   SMTP:      smtp.gmail.com:587 (TLS)
+18:18:04 | INFO    |   LLM:       Gemini (2 keys configured)
+18:18:04 | INFO    | ========================================================
+18:18:04 | INFO    |   PIPELINE START: Friday, July 03, 2026 at 18:18:04 IST
+18:18:04 | INFO    | ========================================================
+18:18:04 | INFO    | STEP 0/4: Verifying component hookup...
+18:18:04 | INFO    |   Template OK: newspaper_template.html (28.4 KB)
+18:18:04 | INFO    |   All components verified and hooked up.
+18:18:04 | INFO    | STEP 1/4: Fetching news data...
+18:18:04 | INFO    |   Feed exists but is stale (57.9h old). Re-fetching...
+18:18:04 | INFO    |   [Fetch] Running: D:\newspaper\.venv\Scripts\python.exe D:\newspaper\news_fetcher.py
+18:18:37 | INFO    |   [Fetch] +----------------------------------------------+
+18:18:37 | INFO    |   [Fetch]   |        DAILY NEWSPAPER FETCHER               |
+18:18:37 | INFO    |   [Fetch]   |        Date:  2026-07-03                    |
+18:18:37 | INFO    |   [Fetch]   |        Time:  18:18:06 IST                  |
+18:18:37 | INFO    |   [Fetch]   +----------------------------------------------+
+18:18:37 | INFO    |   [Fetch] 
+18:18:37 | INFO    |   [Fetch] 
+18:18:37 | INFO    |   [Fetch]   +---------------------------------------------+
+18:18:37 | INFO    |   [Fetch]   |              FETCH SUMMARY                  |
+18:18:37 | INFO    |   [Fetch]   +---------------------------------------------+
+18:18:37 | INFO    |   [Fetch]   |  Domestic Tea:     15 articles     [ success]  |
+18:18:37 | INFO    |   [Fetch]   |  Global Gossip:    16 articles     [ success]  |
+18:18:37 | INFO    |   [Fetch]   |  Word of the Day:   Y              [ success]  |
+18:18:37 | INFO    |   [Fetch]   |  Bag Check:         5 funds        [fallback]  |
+18:18:37 | INFO    |   [Fetch]   +---------------------------------------------+
+18:18:37 | INFO    |   [Fetch] OK
+18:18:37 | INFO    |   Feed validated: newspaper_feed_2026-07-03.json (0.0h old)
+18:18:37 | INFO    | STEP 2/4: Generating content via LLM...
+18:18:37 | INFO    |   Template source: newspaper_template.html
+18:18:37 | INFO    |   Feed source: newspaper_feed_2026-07-03.json
+18:18:37 | INFO    |   [Generate] Running: D:\newspaper\.venv\Scripts\python.exe D:\newspaper\content_generator.py
+18:18:45 | INFO    |   [Generate] +----------------------------------------------+
+18:18:45 | INFO    |   [Generate]   |      THE DAILY SCOOP -- CONTENT GENERATOR    |
+18:18:45 | INFO    |   [Generate]   |      Date: 2026-07-03                       |
+18:18:45 | INFO    |   [Generate]   |      Time: 18:18:39 IST                     |
+18:18:45 | INFO    |   [Generate]   +----------------------------------------------+
+18:18:45 | INFO    |   [Generate] 
+18:18:45 | INFO    |   [Generate] 
+18:18:45 | INFO    |   [Generate]   +---------------------------------------------+
+18:18:45 | INFO    |   [Generate]   |            GENERATION SUMMARY               |
+18:18:45 | INFO    |   [Generate]   +---------------------------------------------+
+18:18:45 | INFO    |   [Generate]   |  Morning Brew:         51 chars              |
+18:18:45 | INFO    |   [Generate]   |  Domestic Dispatch:     51 chars              |
+18:18:45 | INFO    |   [Generate]   |  Global Gossip:        51 chars              |
+18:18:45 | INFO    |   [Generate]   |  Bag Check:            51 chars              |
+18:18:45 | INFO    |   [Generate]   |  Word Example:         51 chars              |
+18:18:45 | INFO    |   [Generate]   |  Hot Take:             51 chars              |
+18:18:45 | INFO    |   [Generate]   |  LLM Provider:          gemini              |
+18:18:45 | INFO    |   [Generate]   +---------------------------------------------+
+18:18:45 | INFO    |   [Generate]   |  Output: D:\newspaper\data\editions\the_daily_scoop_2026-07-03.html|
+18:18:45 | INFO    |   [Generate]   +---------------------------------------------+
+18:18:45 | INFO    |   [Generate] OK
+18:18:45 | INFO    |   Found today's edition: the_daily_scoop_2026-07-03.html
+18:18:45 | INFO    | STEP 3/4: Delivering via secure SMTP...
+18:18:45 | INFO    |   Edition: the_daily_scoop_2026-07-03.html (29.2 KB)
+18:18:45 | INFO    |   Recipient: kaushika13semwal@gmail.com
+18:18:45 | INFO    |   SMTP: smtp.gmail.com:587 (TLS)
+18:18:45 | INFO    |   Preparing email to: kaushika13semwal@gmail.com
+18:18:45 | INFO    |   Subject: The Daily Scoop — Friday, July 03, 2026
+18:18:45 | INFO    |   Edition file: the_daily_scoop_2026-07-03.html (29.2 KB)
+18:18:45 | INFO    |   SMTP attempt 1/3 → smtp.gmail.com:587
+18:18:48 | INFO    |   TLS established, authenticating...
+18:18:51 | INFO    |   Email delivered to kaushika13semwal@gmail.com
+11:18:15 | INFO    | Pre-flight check: all systems go.
+11:18:15 | INFO    |   Pipeline:  news_fetcher.py → content_generator.py → SMTP
+11:18:15 | INFO    |   Template:  newspaper_template.html
+11:18:15 | INFO    |   Feeds:     d:\newspaper\data\datasets
+11:18:15 | INFO    |   Editions:  D:\newspaper\data\editions
+11:18:15 | INFO    |   Delivery:  kaushika13semwal@gmail.com
+11:18:15 | INFO    |   SMTP:      smtp.gmail.com:587 (TLS)
+11:18:15 | INFO    |   LLM:       Gemini (2 keys configured)
+11:18:15 | INFO    | ========================================================
+11:18:15 | INFO    |   PIPELINE START: Saturday, July 04, 2026 at 11:18:15 IST
+11:18:15 | INFO    | ========================================================
+11:18:15 | INFO    | STEP 0/4: Verifying component hookup...
+11:18:15 | INFO    |   Template OK: newspaper_template.html (28.4 KB)
+11:18:15 | INFO    |   All components verified and hooked up.
+11:18:15 | INFO    | STEP 1/4: Fetching news data...
+11:18:15 | INFO    |   Fresh feed found (17.0h old). Skipping re-fetch.
+11:18:15 | INFO    |   Feed validated: newspaper_feed_2026-07-03.json (17.0h old)
+11:18:15 | INFO    | STEP 2/4: Generating content via LLM...
+11:18:15 | INFO    |   Template source: newspaper_template.html
+11:18:15 | INFO    |   Feed source: newspaper_feed_2026-07-03.json
+11:18:15 | INFO    |   [Generate] Running: D:\newspaper\.venv\Scripts\python.exe D:\newspaper\content_generator.py
+11:18:44 | INFO    |   [Generate] +----------------------------------------------+
+11:18:44 | INFO    |   [Generate]   |      THE DAILY SCOOP -- CONTENT GENERATOR    |
+11:18:44 | INFO    |   [Generate]   |      Date: 2026-07-04                       |
+11:18:44 | INFO    |   [Generate]   |      Time: 11:18:37 IST                     |
+11:18:44 | INFO    |   [Generate]   +----------------------------------------------+
+11:18:44 | INFO    |   [Generate] 
+11:18:44 | INFO    |   [Generate] 
+11:18:44 | INFO    |   [Generate]   +---------------------------------------------+
+11:18:44 | INFO    |   [Generate]   |            GENERATION SUMMARY               |
+11:18:44 | INFO    |   [Generate]   +---------------------------------------------+
+11:18:44 | INFO    |   [Generate]   |  Morning Brew:         51 chars              |
+11:18:44 | INFO    |   [Generate]   |  Domestic Dispatch:     51 chars              |
+11:18:44 | INFO    |   [Generate]   |  Global Gossip:        51 chars              |
+11:18:44 | INFO    |   [Generate]   |  Bag Check:            51 chars              |
+11:18:44 | INFO    |   [Generate]   |  Word Example:         51 chars              |
+11:18:44 | INFO    |   [Generate]   |  Hot Take:             51 chars              |
+11:18:44 | INFO    |   [Generate]   |  LLM Provider:          gemini              |
+11:18:44 | INFO    |   [Generate]   +---------------------------------------------+
+11:18:44 | INFO    |   [Generate]   |  Output: D:\newspaper\data\editions\the_daily_scoop_2026-07-03.html|
+11:18:44 | INFO    |   [Generate]   +---------------------------------------------+
+11:18:44 | INFO    |   [Generate] OK
+11:18:44 | INFO    |   Found recent edition: the_daily_scoop_2026-07-03.html (0m ago)
+11:18:44 | INFO    | STEP 3/4: Delivering via secure SMTP...
+11:18:44 | INFO    |   Edition: the_daily_scoop_2026-07-03.html (29.2 KB)
+11:18:44 | INFO    |   Recipient: kaushika13semwal@gmail.com
+11:18:44 | INFO    |   SMTP: smtp.gmail.com:587 (TLS)
+11:18:44 | INFO    |   Preparing email to: kaushika13semwal@gmail.com
+11:18:44 | INFO    |   Subject: The Daily Scoop — Saturday, July 04, 2026
+11:18:44 | INFO    |   Edition file: the_daily_scoop_2026-07-03.html (29.2 KB)
+11:18:44 | INFO    |   SMTP attempt 1/3 → smtp.gmail.com:587
+11:18:47 | INFO    |   TLS established, authenticating...
+11:18:50 | INFO    |   Email delivered to kaushika13semwal@gmail.com
+09:41:12 | INFO    | Pre-flight check: all systems go.
+09:41:12 | INFO    |   Pipeline:  news_fetcher.py → content_generator.py → SMTP
+09:41:12 | INFO    |   Template:  newspaper_template.html
+09:41:12 | INFO    |   Feeds:     d:\newspaper\data\datasets
+09:41:12 | INFO    |   Editions:  D:\newspaper\data\editions
+09:41:12 | INFO    |   Delivery:  kaushika13semwal@gmail.com
+09:41:12 | INFO    |   SMTP:      smtp.gmail.com:587 (TLS)
+09:41:12 | INFO    |   LLM:       Gemini (2 keys configured)
+09:41:12 | INFO    | ========================================================
+09:41:12 | INFO    |   PIPELINE START: Sunday, July 05, 2026 at 09:41:12 IST
+09:41:12 | INFO    | ========================================================
+09:41:12 | INFO    | STEP 0/4: Verifying component hookup...
+09:41:12 | INFO    |   Template OK: newspaper_template.html (28.4 KB)
+09:41:12 | INFO    |   All components verified and hooked up.
+09:41:12 | INFO    | STEP 1/4: Fetching news data...
+09:41:12 | INFO    |   Feed exists but is stale (39.4h old). Re-fetching...
+09:41:12 | INFO    |   [Fetch] Running: D:\newspaper\.venv\Scripts\python.exe D:\newspaper\news_fetcher.py
+09:41:20 | INFO    |   [Fetch] +----------------------------------------------+
+09:41:20 | INFO    |   [Fetch]   |        DAILY NEWSPAPER FETCHER               |
+09:41:20 | INFO    |   [Fetch]   |        Date:  2026-07-05                    |
+09:41:20 | INFO    |   [Fetch]   |        Time:  09:41:13 IST                  |
+09:41:20 | INFO    |   [Fetch]   +----------------------------------------------+
+09:41:20 | INFO    |   [Fetch] 
+09:41:20 | INFO    |   [Fetch] 
+09:41:20 | INFO    |   [Fetch]   +---------------------------------------------+
+09:41:20 | INFO    |   [Fetch]   |              FETCH SUMMARY                  |
+09:41:20 | INFO    |   [Fetch]   +---------------------------------------------+
+09:41:20 | INFO    |   [Fetch]   |  Domestic Tea:     15 articles     [ success]  |
+09:41:20 | INFO    |   [Fetch]   |  Global Gossip:    16 articles     [ success]  |
+09:41:20 | INFO    |   [Fetch]   |  Word of the Day:   Y              [ success]  |
+09:41:20 | INFO    |   [Fetch]   |  Bag Check:         5 funds        [fallback]  |
+09:41:20 | INFO    |   [Fetch]   +---------------------------------------------+
+09:41:20 | INFO    |   [Fetch] OK
+09:41:20 | INFO    |   Feed validated: newspaper_feed_2026-07-05.json (0.0h old)
+09:41:20 | INFO    | STEP 2/4: Generating content via LLM...
+09:41:20 | INFO    |   Template source: newspaper_template.html
+09:41:20 | INFO    |   Feed source: newspaper_feed_2026-07-05.json
+09:41:20 | INFO    |   [Generate] Running: D:\newspaper\.venv\Scripts\python.exe D:\newspaper\content_generator.py
+09:41:27 | INFO    |   [Generate] +----------------------------------------------+
+09:41:27 | INFO    |   [Generate]   |      THE DAILY SCOOP -- CONTENT GENERATOR    |
+09:41:27 | INFO    |   [Generate]   |      Date: 2026-07-05                       |
+09:41:27 | INFO    |   [Generate]   |      Time: 09:41:21 IST                     |
+09:41:27 | INFO    |   [Generate]   +----------------------------------------------+
+09:41:27 | INFO    |   [Generate] 
+09:41:27 | INFO    |   [Generate] 
+09:41:27 | INFO    |   [Generate]   +---------------------------------------------+
+09:41:27 | INFO    |   [Generate]   |            GENERATION SUMMARY               |
+09:41:27 | INFO    |   [Generate]   +---------------------------------------------+
+09:41:27 | INFO    |   [Generate]   |  Morning Brew:         51 chars              |
+09:41:27 | INFO    |   [Generate]   |  Domestic Dispatch:     51 chars              |
+09:41:27 | INFO    |   [Generate]   |  Global Gossip:        51 chars              |
+09:41:27 | INFO    |   [Generate]   |  Bag Check:            51 chars              |
+09:41:27 | INFO    |   [Generate]   |  Word Example:         51 chars              |
+09:41:27 | INFO    |   [Generate]   |  Hot Take:             51 chars              |
+09:41:27 | INFO    |   [Generate]   |  LLM Provider:          gemini              |
+09:41:27 | INFO    |   [Generate]   +---------------------------------------------+
+09:41:27 | INFO    |   [Generate]   |  Output: D:\newspaper\data\editions\the_daily_scoop_2026-07-05.html|
+09:41:27 | INFO    |   [Generate]   +---------------------------------------------+
+09:41:27 | INFO    |   [Generate] OK
+09:41:27 | INFO    |   Found today's edition: the_daily_scoop_2026-07-05.html
+09:41:27 | INFO    | STEP 3/4: Delivering via secure SMTP...
+09:41:27 | INFO    |   Edition: the_daily_scoop_2026-07-05.html (29.2 KB)
+09:41:27 | INFO    |   Recipient: kaushika13semwal@gmail.com
+09:41:27 | INFO    |   SMTP: smtp.gmail.com:587 (TLS)
+09:41:27 | INFO    |   Preparing email to: kaushika13semwal@gmail.com
+09:41:27 | INFO    |   Subject: The Daily Scoop — Sunday, July 05, 2026
+09:41:27 | INFO    |   Edition file: the_daily_scoop_2026-07-05.html (29.2 KB)
+09:41:27 | INFO    |   SMTP attempt 1/3 → smtp.gmail.com:587
+09:41:28 | INFO    |   TLS established, authenticating...
+09:41:31 | INFO    |   Email delivered to kaushika13semwal@gmail.com
+09:31:38 | INFO    | Pre-flight check: all systems go.
+09:31:38 | INFO    |   Pipeline:  news_fetcher.py → content_generator.py → SMTP
+09:31:38 | INFO    |   Template:  newspaper_template.html
+09:31:38 | INFO    |   Feeds:     d:\newspaper\data\datasets
+09:31:38 | INFO    |   Editions:  D:\newspaper\data\editions
+09:31:38 | INFO    |   Delivery:  kaushika13semwal@gmail.com
+09:31:38 | INFO    |   SMTP:      smtp.gmail.com:587 (TLS)
+09:31:38 | INFO    |   LLM:       Gemini (2 keys configured)
+09:31:38 | INFO    | ========================================================
+09:31:38 | INFO    |   PIPELINE START: Monday, July 06, 2026 at 09:31:38 IST
+09:31:38 | INFO    | ========================================================
+09:31:38 | INFO    | STEP 0/4: Verifying component hookup...
+09:31:38 | INFO    |   Template OK: newspaper_template.html (28.4 KB)
+09:31:38 | INFO    |   All components verified and hooked up.
+09:31:38 | INFO    | STEP 1/4: Fetching news data...
+09:31:38 | INFO    |   Feed exists but is stale (23.8h old). Re-fetching...
+09:31:38 | INFO    |   [Fetch] Running: D:\newspaper\.venv\Scripts\python.exe D:\newspaper\news_fetcher.py
+14:25:14 | INFO    | Pre-flight check: all systems go.
+14:25:14 | INFO    |   Pipeline:  news_fetcher.py → content_generator.py → SMTP
+14:25:14 | INFO    |   Template:  newspaper_template.html
+14:25:14 | INFO    |   Feeds:     d:\newspaper\data\datasets
+14:25:14 | INFO    |   Editions:  D:\newspaper\data\editions
+14:25:14 | INFO    |   Delivery:  kaushika13semwal@gmail.com
+14:25:14 | INFO    |   SMTP:      smtp.gmail.com:587 (TLS)
+14:25:14 | INFO    |   LLM:       Gemini (2 keys configured)
+14:25:14 | INFO    | ========================================================
+14:25:14 | INFO    |   PIPELINE START: Tuesday, July 07, 2026 at 14:25:14 IST
+14:25:14 | INFO    | ========================================================
+14:25:14 | INFO    | STEP 0/4: Verifying component hookup...
+14:25:14 | INFO    |   Template OK: newspaper_template.html (28.4 KB)
+14:25:14 | INFO    |   All components verified and hooked up.
+14:25:14 | INFO    | STEP 1/4: Fetching news data...
+14:25:14 | INFO    |   Feed exists but is stale (28.0h old). Re-fetching...
+14:25:14 | INFO    |   [Fetch] Running: D:\newspaper\.venv\Scripts\python.exe D:\newspaper\news_fetcher.py
+14:25:43 | INFO    |   [Fetch] +----------------------------------------------+
+14:25:43 | INFO    |   [Fetch]   |        DAILY NEWSPAPER FETCHER               |
+14:25:43 | INFO    |   [Fetch]   |        Date:  2026-07-07                    |
+14:25:43 | INFO    |   [Fetch]   |        Time:  14:25:16 IST                  |
+14:25:43 | INFO    |   [Fetch]   +----------------------------------------------+
+14:25:43 | INFO    |   [Fetch] 
+14:25:43 | INFO    |   [Fetch] 
+14:25:43 | INFO    |   [Fetch]   +---------------------------------------------+
+14:25:43 | INFO    |   [Fetch]   |              FETCH SUMMARY                  |
+14:25:43 | INFO    |   [Fetch]   +---------------------------------------------+
+14:25:43 | INFO    |   [Fetch]   |  Domestic Tea:     15 articles     [ success]  |
+14:25:43 | INFO    |   [Fetch]   |  Global Gossip:    16 articles     [ success]  |
+14:25:43 | INFO    |   [Fetch]   |  Word of the Day:   Y              [ success]  |
+14:25:43 | INFO    |   [Fetch]   |  Bag Check:         5 funds        [fallback]  |
+14:25:43 | INFO    |   [Fetch]   +---------------------------------------------+
+14:25:43 | INFO    |   [Fetch] OK
+14:25:43 | INFO    |   Feed validated: newspaper_feed_2026-07-07.json (0.0h old)
+14:25:43 | INFO    | STEP 2/4: Generating content via LLM...
+14:25:43 | INFO    |   Template source: newspaper_template.html
+14:25:43 | INFO    |   Feed source: newspaper_feed_2026-07-07.json
+14:25:43 | INFO    |   [Generate] Running: D:\newspaper\.venv\Scripts\python.exe D:\newspaper\content_generator.py
+14:25:51 | INFO    |   [Generate] +----------------------------------------------+
+14:25:51 | INFO    |   [Generate]   |      THE DAILY SCOOP -- CONTENT GENERATOR    |
+14:25:51 | INFO    |   [Generate]   |      Date: 2026-07-07                       |
+14:25:51 | INFO    |   [Generate]   |      Time: 14:25:46 IST                     |
+14:25:51 | INFO    |   [Generate]   +----------------------------------------------+
+14:25:51 | INFO    |   [Generate] 
+14:25:51 | INFO    |   [Generate] 
+14:25:51 | INFO    |   [Generate]   +---------------------------------------------+
+14:25:51 | INFO    |   [Generate]   |            GENERATION SUMMARY               |
+14:25:51 | INFO    |   [Generate]   +---------------------------------------------+
+14:25:51 | INFO    |   [Generate]   |  Morning Brew:         51 chars              |
+14:25:51 | INFO    |   [Generate]   |  Domestic Dispatch:     51 chars              |
+14:25:51 | INFO    |   [Generate]   |  Global Gossip:        51 chars              |
+14:25:51 | INFO    |   [Generate]   |  Bag Check:            51 chars              |
+14:25:51 | INFO    |   [Generate]   |  Word Example:         51 chars              |
+14:25:51 | INFO    |   [Generate]   |  Hot Take:             51 chars              |
+14:25:51 | INFO    |   [Generate]   |  LLM Provider:          gemini              |
+14:25:51 | INFO    |   [Generate]   +---------------------------------------------+
+14:25:51 | INFO    |   [Generate]   |  Output: D:\newspaper\data\editions\the_daily_scoop_2026-07-07.html|
+14:25:51 | INFO    |   [Generate]   +---------------------------------------------+
+14:25:51 | INFO    |   [Generate] OK
+14:25:51 | INFO    |   Found today's edition: the_daily_scoop_2026-07-07.html
+14:25:51 | INFO    | STEP 3/4: Delivering via secure SMTP...
+14:25:51 | INFO    |   Edition: the_daily_scoop_2026-07-07.html (29.2 KB)
+14:25:51 | INFO    |   Recipient: kaushika13semwal@gmail.com
+14:25:51 | INFO    |   SMTP: smtp.gmail.com:587 (TLS)
+14:25:51 | INFO    |   Preparing email to: kaushika13semwal@gmail.com
+14:25:51 | INFO    |   Subject: The Daily Scoop — Tuesday, July 07, 2026
+14:25:51 | INFO    |   Edition file: the_daily_scoop_2026-07-07.html (29.2 KB)
+14:25:51 | INFO    |   SMTP attempt 1/3 → smtp.gmail.com:587
+14:25:54 | INFO    |   TLS established, authenticating...
+14:25:57 | INFO    |   Email delivered to kaushika13semwal@gmail.com
+07:30:03 | INFO    | Pre-flight check: all systems go.
+07:30:03 | INFO    |   Pipeline:  news_fetcher.py → content_generator.py → SMTP
+07:30:03 | INFO    |   Template:  newspaper_template.html
+07:30:03 | INFO    |   Feeds:     d:\newspaper\data\datasets
+07:30:03 | INFO    |   Editions:  D:\newspaper\data\editions
+07:30:03 | INFO    |   Delivery:  kaushika13semwal@gmail.com
+07:30:03 | INFO    |   SMTP:      smtp.gmail.com:587 (TLS)
+07:30:03 | INFO    |   LLM:       Gemini (2 keys configured)
+07:30:03 | INFO    | ========================================================
+07:30:03 | INFO    |   PIPELINE START: Wednesday, July 08, 2026 at 07:30:03 IST
+07:30:03 | INFO    | ========================================================
+07:30:03 | INFO    | STEP 0/4: Verifying component hookup...
+07:30:03 | INFO    |   Template OK: newspaper_template.html (28.4 KB)
+07:30:03 | INFO    |   All components verified and hooked up.
+07:30:03 | INFO    | STEP 1/4: Fetching news data...
+07:30:03 | INFO    |   Fresh feed found (17.1h old). Skipping re-fetch.
+07:30:03 | INFO    |   Feed validated: newspaper_feed_2026-07-07.json (17.1h old)
+07:30:03 | INFO    | STEP 2/4: Generating content via LLM...
+07:30:03 | INFO    |   Template source: newspaper_template.html
+07:30:03 | INFO    |   Feed source: newspaper_feed_2026-07-07.json
+07:30:03 | INFO    |   [Generate] Running: D:\newspaper\.venv\Scripts\python.exe D:\newspaper\content_generator.py
+07:30:10 | INFO    |   [Generate] +----------------------------------------------+
+07:30:10 | INFO    |   [Generate]   |      THE DAILY SCOOP -- CONTENT GENERATOR    |
+07:30:10 | INFO    |   [Generate]   |      Date: 2026-07-08                       |
+07:30:10 | INFO    |   [Generate]   |      Time: 07:30:05 IST                     |
+07:30:10 | INFO    |   [Generate]   +----------------------------------------------+
+07:30:10 | INFO    |   [Generate] 
+07:30:10 | INFO    |   [Generate] 
+07:30:10 | INFO    |   [Generate]   +---------------------------------------------+
+07:30:10 | INFO    |   [Generate]   |            GENERATION SUMMARY               |
+07:30:10 | INFO    |   [Generate]   +---------------------------------------------+
+07:30:10 | INFO    |   [Generate]   |  Morning Brew:         51 chars              |
+07:30:10 | INFO    |   [Generate]   |  Domestic Dispatch:     51 chars              |
+07:30:10 | INFO    |   [Generate]   |  Global Gossip:        51 chars              |
+07:30:10 | INFO    |   [Generate]   |  Bag Check:            51 chars              |
+07:30:10 | INFO    |   [Generate]   |  Word Example:         51 chars              |
+07:30:10 | INFO    |   [Generate]   |  Hot Take:             51 chars              |
+07:30:10 | INFO    |   [Generate]   |  LLM Provider:          gemini              |
+07:30:10 | INFO    |   [Generate]   +---------------------------------------------+
+07:30:10 | INFO    |   [Generate]   |  Output: D:\newspaper\data\editions\the_daily_scoop_2026-07-07.html|
+07:30:10 | INFO    |   [Generate]   +---------------------------------------------+
+07:30:10 | INFO    |   [Generate] OK
+07:30:10 | INFO    |   Found recent edition: the_daily_scoop_2026-07-07.html (0m ago)
+07:30:10 | INFO    | STEP 3/4: Delivering via secure SMTP...
+07:30:10 | INFO    |   Edition: the_daily_scoop_2026-07-07.html (29.2 KB)
+07:30:10 | INFO    |   Recipient: kaushika13semwal@gmail.com
+07:30:10 | INFO    |   SMTP: smtp.gmail.com:587 (TLS)
+07:30:10 | INFO    |   Preparing email to: kaushika13semwal@gmail.com
+07:30:10 | INFO    |   Subject: The Daily Scoop — Wednesday, July 08, 2026
+07:30:10 | INFO    |   Edition file: the_daily_scoop_2026-07-07.html (29.2 KB)
+07:30:10 | INFO    |   SMTP attempt 1/3 → smtp.gmail.com:587
+07:30:13 | INFO    |   TLS established, authenticating...
+07:30:15 | INFO    |   Email delivered to kaushika13semwal@gmail.com
+20:26:37 | INFO    | Pre-flight check: all systems go.
+20:26:37 | INFO    |   Pipeline:  news_fetcher.py → content_generator.py → SMTP
+20:26:37 | INFO    |   Template:  newspaper_template.html
+20:26:37 | INFO    |   Feeds:     d:\newspaper\data\datasets
+20:26:37 | INFO    |   Editions:  D:\newspaper\data\editions
+20:26:37 | INFO    |   Delivery:  kaushika13semwal@gmail.com
+20:26:37 | INFO    |   SMTP:      smtp.gmail.com:587 (TLS)
+20:26:37 | INFO    |   LLM:       Gemini (2 keys configured)
+20:26:37 | INFO    | ========================================================
+20:26:37 | INFO    |   PIPELINE START: Thursday, July 09, 2026 at 20:26:37 IST
+20:26:37 | INFO    | ========================================================
+20:26:37 | INFO    | STEP 0/4: Verifying component hookup...
+20:26:37 | INFO    |   Template OK: newspaper_template.html (28.4 KB)
+20:26:37 | INFO    |   All components verified and hooked up.
+20:26:37 | INFO    | STEP 1/4: Fetching news data...
+20:26:37 | INFO    |   Feed exists but is stale (54.0h old). Re-fetching...
+20:26:37 | INFO    |   [Fetch] Running: D:\newspaper\.venv\Scripts\python.exe D:\newspaper\news_fetcher.py
+20:27:17 | INFO    |   [Fetch] +----------------------------------------------+
+20:27:17 | INFO    |   [Fetch]   |        DAILY NEWSPAPER FETCHER               |
+20:27:17 | INFO    |   [Fetch]   |        Date:  2026-07-09                    |
+20:27:17 | INFO    |   [Fetch]   |        Time:  20:26:40 IST                  |
+20:27:17 | INFO    |   [Fetch]   +----------------------------------------------+
+20:27:17 | INFO    |   [Fetch] 
+20:27:17 | INFO    |   [Fetch] 
+20:27:17 | INFO    |   [Fetch]   +---------------------------------------------+
+20:27:17 | INFO    |   [Fetch]   |              FETCH SUMMARY                  |
+20:27:17 | INFO    |   [Fetch]   +---------------------------------------------+
+20:27:17 | INFO    |   [Fetch]   |  Domestic Tea:     15 articles     [ success]  |
+20:27:17 | INFO    |   [Fetch]   |  Global Gossip:    16 articles     [ success]  |
+20:27:17 | INFO    |   [Fetch]   |  Word of the Day:   Y              [ success]  |
+20:27:17 | INFO    |   [Fetch]   |  Bag Check:         5 funds        [fallback]  |
+20:27:17 | INFO    |   [Fetch]   +---------------------------------------------+
+20:27:17 | INFO    |   [Fetch] OK
+20:27:17 | INFO    |   Feed validated: newspaper_feed_2026-07-09.json (0.0h old)
+20:27:17 | INFO    | STEP 2/4: Generating content via LLM...
+20:27:17 | INFO    |   Template source: newspaper_template.html
+20:27:17 | INFO    |   Feed source: newspaper_feed_2026-07-09.json
+20:27:17 | INFO    |   [Generate] Running: D:\newspaper\.venv\Scripts\python.exe D:\newspaper\content_generator.py
+20:27:27 | INFO    |   [Generate] +----------------------------------------------+
+20:27:27 | INFO    |   [Generate]   |      THE DAILY SCOOP -- CONTENT GENERATOR    |
+20:27:27 | INFO    |   [Generate]   |      Date: 2026-07-09                       |
+20:27:27 | INFO    |   [Generate]   |      Time: 20:27:22 IST                     |
+20:27:27 | INFO    |   [Generate]   +----------------------------------------------+
+20:27:27 | INFO    |   [Generate] 
+20:27:27 | INFO    |   [Generate] 
+20:27:27 | INFO    |   [Generate]   +---------------------------------------------+
+20:27:27 | INFO    |   [Generate]   |            GENERATION SUMMARY               |
+20:27:27 | INFO    |   [Generate]   +---------------------------------------------+
+20:27:27 | INFO    |   [Generate]   |  Morning Brew:         51 chars              |
+20:27:27 | INFO    |   [Generate]   |  Domestic Dispatch:     51 chars              |
+20:27:27 | INFO    |   [Generate]   |  Global Gossip:        51 chars              |
+20:27:27 | INFO    |   [Generate]   |  Bag Check:            51 chars              |
+20:27:27 | INFO    |   [Generate]   |  Word Example:         51 chars              |
+20:27:27 | INFO    |   [Generate]   |  Hot Take:             51 chars              |
+20:27:27 | INFO    |   [Generate]   |  LLM Provider:          gemini              |
+20:27:27 | INFO    |   [Generate]   +---------------------------------------------+
+20:27:27 | INFO    |   [Generate]   |  Output: D:\newspaper\data\editions\the_daily_scoop_2026-07-09.html|
+20:27:27 | INFO    |   [Generate]   +---------------------------------------------+
+20:27:27 | INFO    |   [Generate] OK
+20:27:27 | INFO    |   Found today's edition: the_daily_scoop_2026-07-09.html
+20:27:27 | INFO    | STEP 3/4: Delivering via secure SMTP...
+20:27:27 | INFO    |   Edition: the_daily_scoop_2026-07-09.html (29.2 KB)
+20:27:27 | INFO    |   Recipient: kaushika13semwal@gmail.com
+20:27:27 | INFO    |   SMTP: smtp.gmail.com:587 (TLS)
+20:27:27 | INFO    |   Preparing email to: kaushika13semwal@gmail.com
+20:27:27 | INFO    |   Subject: The Daily Scoop — Thursday, July 09, 2026
+20:27:27 | INFO    |   Edition file: the_daily_scoop_2026-07-09.html (29.2 KB)
+20:27:27 | INFO    |   SMTP attempt 1/3 → smtp.gmail.com:587
+20:27:29 | INFO    |   TLS established, authenticating...
+20:27:31 | INFO    |   Email delivered to kaushika13semwal@gmail.com

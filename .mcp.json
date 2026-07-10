@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "jetro": {
+      "type": "stdio",
+      "command": "C:\\Users\\Dell INSPIRON\\.jetro\\runtime\\node-win32-x64.exe",
+      "args": [
+        "C:\\Users\\Dell INSPIRON\\.jetro\\mcp-server\\index.js"
+      ],
+      "env": {
+        "JET_WORKSPACE": "d:\\newspaper",
+        "JET_API_URL": "https://api.jetro.ai",
+        "JET_JWT": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImVlOTA0NmVhZDJlMDUwMDAxMGVkNTA0M2I0ODNkODRiMGM1MmM3YzQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vamV0cm8tY2RhZWYiLCJhdWQiOiJqZXRyby1jZGFlZiIsImF1dGhfdGltZSI6MTc4MTkyNzIxMywidXNlcl9pZCI6InBJVmt4VWg4ZjFXUVg2c25hak9WbG9WRGk0ZDIiLCJzdWIiOiJwSVZreFVoOGYxV1FYNnNuYWpPVmxvVkRpNGQyIiwiaWF0IjoxNzgxOTI3MjEzLCJleHAiOjE3ODE5MzA4MTMsImVtYWlsIjoia2F1c2hpa2ExM3NlbXdhbEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJrYXVzaGlrYTEzc2Vtd2FsQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.bziVaxvtCoHNESOhrikg_96KGkPbfSIl-ulHkxhJb2_ThqE7vkp1pORgdWOeZZ9bEUSXuO2ncnAgem2wTS3_hpDCRQvoQ_-tf_VUJrmNHN-ubUYs22AKIziRoIgNwNgOLVPXlCPiJM5o-B7wz3IHt1pJJD7JmANe7YS1-lS92dOnagOhHX4drz8DM2v-LtVUR02-W2cfzoXxTz1zrLUlEtHGvGHqnJWOb9qrTAw4n2I4YUxf4g98_9a_ERkjOHVq3xrPmbn2ODP8Qhs3jmG89Jo-F6XVEA5osdYfMxaswuuY3hr2y1nIX1kQHTQIFoMgwhempq27Jol_7BGdHXOIUA",
+        "PATH": "C:\\Users\\Dell INSPIRON\\.jetro\\runtime;C:\\Program Files\\Microsoft SDKs\\Azure\\CLI2\\wbin;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;E:\\KAUSHIKA\\clg\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Git\\cmd;C:\\Users\\Dell INSPIRON\\;C:\\Program Files\\Git LFS;C:\\Program Files\\dotnet\\;C:\\Users\\Dell INSPIRON\\Scripts\\;C:\\Users\\Dell INSPIRON\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\;C:\\Users\\Dell INSPIRON\\AppData\\Local\\Programs\\Python\\Python313\\;C:\\Users\\Dell INSPIRON\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Dell INSPIRON\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Dell INSPIRON\\AppData\\Roaming\\npm;C:\\ffmpeg\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files (x86)\\PuTTY\\;C:\\flutter\\bin;D:\\Kiro\\bin;C:\\Users\\Dell INSPIRON\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+      }
+    }
+  }
+}

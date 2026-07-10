@@ -1,0 +1,325 @@
+{
+  "metadata": {
+    "generated_at": "2026-06-30T08:13:19.414422+05:30",
+    "edition_date": "2026-06-30",
+    "generator": "news_fetcher.py v1.0",
+    "fetch_status": {
+      "domestic_tea": "success",
+      "global_gossip": "success",
+      "word_of_the_day": "success",
+      "the_bag_check": "fallback"
+    }
+  },
+  "domestic_tea": [
+    {
+      "headline": "Maharashtra TET paper leak points to an inter-State racket, finds investigation team",
+      "summary": "Authorities are examining whether provisions of the Maharashtra Control of Organised Crime Act (MCOCA) can be invoked against those found guilty",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/maharashtra-tet-paper-leak-points-to-an-inter-state-racket-finds-investigation-team/article71161620.ece",
+      "published_at": "2026-06-30T02:20:14+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Congress seeks Rajnath Singh’s resignation in controversy over Operation Sindoor deaths",
+      "summary": "The Defence Minister has ‘insulted’ the soldiers who laid down their lives during Operation Sindoor, the Opposition party says, asking why it had taken 13 months for their names to be made public",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/congress-seeks-rajnath-singhs-resignation-in-controversy-over-operation-sindoor-deaths/article71162274.ece",
+      "published_at": "2026-06-30T02:18:38+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Honeymoon murder: Meghalaya HC upholds bail to prime accused Sonam Raghuvanshi",
+      "summary": "Police have alleged that Sonam conspired with hired assailants to kill her husband for financial gains",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/honeymoon-murder-meghalaya-hc-upholds-bail-to-prime-accused-sonam-raghuvanshi/article71164144.ece",
+      "published_at": "2026-06-30T01:49:22+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Jharkhand government appoints 1,042 new teachers",
+      "summary": "While handing over the job letters to the newly appointed teachers, Chief Minister Hemant Soren said that if teachers discharge their duties with honesty and diligence, both society and the State would benefit. He urged teachers to adopt a sensitive and skillful approach in their interactions with children",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/jharkhand/jharkhand-government-appoints-1042-new-teachers/article71161788.ece",
+      "published_at": "2026-06-30T01:48:20+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "​Deadly fumes: On the ammonia gas leak tragedy in Tamil Nadu",
+      "summary": "Strict enforcement of safety norms is absent in many industrial units",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/opinion/editorial/deadly-fumes-on-the-ammonia-gas-leak-tragedy-in-tamil-nadu/article71133398.ece",
+      "published_at": "2026-06-30T01:39:13+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "When Indian Lieutenant, Pakistan Major swapped cigarettes, chocolate at Kargil",
+      "summary": "",
+      "source": "Indian Express",
+      "url": "https://indianexpress.com/article/india/when-indian-lieutenant-pakistan-major-swapped-cigarettes-chocolate-at-kargil-10763535/",
+      "published_at": "2026-06-30T01:30:10+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Why teenaged girl from an Odisha hamlet died in Tamil Nadu unit 1,500 km from home",
+      "summary": "",
+      "source": "Indian Express",
+      "url": "https://indianexpress.com/article/india/girls-death-in-tamil-nadu-gas-leak-spotlights-desperate-migration-in-odisha-tribal-hamlet-10763614/",
+      "published_at": "2026-06-30T00:00:47+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Kolkata Police to review ex-editor’s passport application file; Kerala CM urges Suvendu to step in",
+      "summary": "",
+      "source": "Indian Express",
+      "url": "https://indianexpress.com/article/india/kolkata-police-to-review-ex-editor-r-rajagopals-passport-application-file-kerala-cm-v-d-satheesan-urges-suvendu-adhikari-to-step-in-10763630/",
+      "published_at": "2026-06-30T00:00:25+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Courts must remain vigilant guardians of constitutional supremacy: CJI Surya Kant in Sweden",
+      "summary": "",
+      "source": "Indian Express",
+      "url": "https://indianexpress.com/article/india/courts-must-remain-vigilant-guardians-of-constitutional-supremacy-cji-surya-kant-in-sweden-10763642/",
+      "published_at": "2026-06-29T22:53:33+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Government sets up study group to strengthen film industry; Prasoon Joshi to lead team",
+      "summary": "",
+      "source": "Indian Express",
+      "url": "https://indianexpress.com/article/india/government-sets-up-study-group-to-strengthen-film-industry-prasoon-joshi-to-lead-team-10763572/",
+      "published_at": "2026-06-29T20:47:26+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Amid CJP protest, BJP chief Nitin Nabin says India's Gen Z are nation builders, not ‘tukde tukde’ mindset",
+      "summary": "Those with a 'tukde tukde gang' mindset, who raise divisive slogans and challenge the country's Constitution, culture and soul cannot be India's Gen Z, the BJP cjoef said.",
+      "source": "Livemint",
+      "url": "https://www.livemint.com/news/india/cockroach-protest-bjp-nitin-nabin-says-indias-gen-z-are-nation-builders-not-tukde-tukke-mindset-neet-paper-leak-dipke-11782785657518.html",
+      "published_at": "2026-06-30T02:34:26+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Born on 30 June? You share your birthday with Mike Tyson, Cheryl, Arvind Swami and more",
+      "summary": "If your birthday falls on 30 June then you were born on the same date as Mike Tyson, Cheryl, Arvind Swami and more renowned personalities across the world. Check out who.",
+      "source": "Livemint",
+      "url": "https://www.livemint.com/news/trends/born-on-30-june-you-share-your-birthday-with-mike-tyson-cheryl-arvind-swami-more-11782782433875.html",
+      "published_at": "2026-06-30T02:29:22+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Ketan Agarwal murder: Police to conduct gait analysis of accused Chetan Chaudhary - here is why",
+      "summary": "Chetan Chaudhary, accused in Ketan Agarwal's murder, will undergo gait analysis to compare his walking patterns from CCTV footage with a recreated video, aiding the investigation into the June 18 crime at Lohagad Fort.",
+      "source": "Livemint",
+      "url": "https://www.livemint.com/news/india/ketan-agarwal-murder-gait-analysis-of-accused-chetan-chaudhary-siya-goyal-custody-11782784607678.html",
+      "published_at": "2026-06-30T02:06:03+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "FAA opens probe into JetBlue flight's reported drone hit while approaching JFK airport; here's what pilot told ATC",
+      "summary": "The FAA has initiated an investigation after a JetBlue flight experienced a drone collision while approaching JFK Airport. The incident occurred at 3,000 feet at 7:15 am EDT, but the flight landed safely with no damage found.",
+      "source": "Livemint",
+      "url": "https://www.livemint.com/news/us-news/faa-opens-probe-into-jetblue-flights-reported-drone-hit-while-approaching-jfk-airport-heres-what-pilot-told-atc-11782780831206.html",
+      "published_at": "2026-06-30T02:02:43+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Trump says Washington Reflecting Pool restored, warns monument vandals of 10-year prison sentence",
+      "summary": "Court documents filed this week show that the National Park Service reported to the US Park Police a 9 June incident in which a sharp knife or razor cut the pool’s new liner, Associated Press reported.",
+      "source": "Livemint",
+      "url": "https://www.livemint.com/news/us-news/trump-says-washington-reflecting-pool-restored-warns-monument-vandals-of-10-year-prison-sentence-11782782676476.html",
+      "published_at": "2026-06-30T01:46:42+05:30",
+      "category": "national"
+    }
+  ],
+  "global_gossip": [
+    {
+      "headline": "Aftershock frays nerves as many Venezuelans left to fend for themselves",
+      "summary": "In areas devastated by the twin earthquakes, people are using crowbars, pickaxes and their bare hands to try to reach survivors.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/cqj1210rj0yo?at_medium=RSS&at_campaign=rss",
+      "published_at": "2026-06-29T20:00:44+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "'No one move!': The agonising silence as Venezuela rescuers listen for survivors",
+      "summary": "With tens of thousands of people still believed missing, teams listen for signs of life beneath the rubble.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/c78yvq72dg7o?at_medium=RSS&at_campaign=rss",
+      "published_at": "2026-06-29T21:19:28+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Six people shot dead at centre for mothers and children in Germany",
+      "summary": "The male suspect who has been arrested was in a custody dispute over his baby daughter, police say.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/c17yzzw1vkjo?at_medium=RSS&at_campaign=rss",
+      "published_at": "2026-06-29T19:53:57+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "One big win and three defeats for Trump in dramatic day at Supreme Court",
+      "summary": "While Trump celebrated a ruling expanding presidential power to remove and replace regulators, other decisions were major setbacks.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/ceqdzd7zx24o?at_medium=RSS&at_campaign=rss",
+      "published_at": "2026-06-29T20:34:52+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Amazon is now the biggest foreign investor in India’s AI sector",
+      "summary": "Also in this newsletter, weaponised drones made in India",
+      "source": "Financial Times",
+      "url": "https://www.ft.com/content/3dcdbc00-2be8-4c94-90cc-c8f4ce81a7e3",
+      "published_at": "2026-06-30T01:30:04+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Investigation into maternity care in England finds ‘overall system failure’",
+      "summary": "Government accepts proposal to appoint a national maternity and neonatal commissioner",
+      "source": "Financial Times",
+      "url": "https://www.ft.com/content/9ef8b545-079b-4bf9-81ee-c2174c257a3b",
+      "published_at": "2026-06-29T23:01:03+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "UK regulator waters down landmark crypto rules",
+      "summary": "FCA eases capital and disclosure requirements after complaints that incoming digital assets regime was too onerous",
+      "source": "Financial Times",
+      "url": "https://www.ft.com/content/c2ace628-7bd9-4f3b-b835-970d6dd930bb",
+      "published_at": "2026-06-29T23:01:03+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "‘Tooth fairy’ payout nears £5 as UK childhood finances overtake inflation",
+      "summary": "Annual survey also shows the average child gets £10 per week in pocket money",
+      "source": "Financial Times",
+      "url": "https://www.ft.com/content/95e9ac59-4aff-47df-860b-7ecdc3bba271",
+      "published_at": "2026-06-29T23:01:03+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "‘Everyone is talking about Cape Verde’: World Cup run delights diaspora community in UK",
+      "summary": "Cape Verdeans in Britain feeling ‘incredibly proud’ after team’s hard-fought draws against Spain and UruguayWorld Cup live – latest updatesFor as long as she can remember, 13-year-old Lauryn struggled to find a map that included Cape Verde. Now, to her great delight, the tiny African island nation is finally centre stage.“Seeing our country shown across the world at the World Cup makes me feel incredibly proud,” Lauryn says. “After the first match, everyone was talking about Cape Verde. Peopl...",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/jun/26/cape-verde-world-cup-run-delights-diaspora-community-uk",
+      "published_at": "2026-06-26T12:03:25+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Whereabouts of nearly 300 people with Ebola unknown in DR Congo",
+      "summary": "Fears over ‘huge community transmission’ as modelling predicts thousands of deaths in DRC by SeptemberThe whereabouts of almost 300 people who have tested positive for Ebola in the Democratic Republic of the Congo is unknown, according to Africa’s top public health official.The humanitarian crisis amid the conflict in the affected areas means more than 1 million people are living in camps to which health workers have no access, Dr Jean Kaseya, director general of the Africa Centers for Diseas...",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/global-development/2026/jun/26/whereabouts-of-nearly-300-people-with-ebola-unknown-in-drc",
+      "published_at": "2026-06-26T10:55:56+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Outrage as woman jailed for three years after criticising Somali government online",
+      "summary": "Sentencing of 27-year-old Sadia Moalim Ali condemned by former president and prime ministers as well as rights groupsA rickshaw driver in Somalia has been sentenced to three years in prison for comments she made on social media, in a case that has caught the public’s attention and provoked outrage in the country.Sadia Moalim Ali, a 27-year-old nursing graduate, was originally charged with insulting government institutions and incitement to commit a crime, but convicted only of the former. Her...",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement",
+      "published_at": "2026-06-26T10:00:14+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "‘Constitutional coup’ claims as Zimbabwe senate approves extending presidential term",
+      "summary": "Opposition figures fear changes will further tighten 83-year-old president Emmerson Mnangagwa’s hold on powerZimbabwe is on the brink of amending its constitution to give the president more time in office, a change that the government says will bring stability but that opponents have labelled a “constitutional coup”.The upper house of Zimbabwe’s parliament voted on Wednesday 75-4 in favour of the constitutional amendments, which will allow President Emmerson Mnangagwa to stay in office until ...",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/jun/25/constitutional-coup-zimbabwe-senate-approves-presidential-term",
+      "published_at": "2026-06-25T16:04:41+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Burnham sets out vision to transform Britain and fix ‘broken’ system",
+      "summary": "Expected next prime minister focuses on restoring faith in politics, cost of living and devolution in major speechWhat is Andy Burnham’s economic and political blueprint for Britain?Andy Burnham has set out his blueprint to transform the UK with a promise to improve living standards and restore faith in politics through the “biggest rebalancing of power our country has ever seen”.The person widely expected to be the next prime minister said the current system was “broken” and that “more of th...",
+      "source": "The Guardian Business",
+      "url": "https://www.theguardian.com/politics/2026/jun/29/burnham-sets-out-vision-to-transform-britain-and-fix-broken-system",
+      "published_at": "2026-06-29T19:39:04+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Crypto firms operating in UK to be subject to sweeping new rules",
+      "summary": "City regulator will require booming industry to prove its resilience to risk from October next yearCrypto firms operating in the UK will be forced to prove they can weather market shocks and hold capital against risky assets as part of sweeping new rules announced by the Financial Conduct Authority (FCA).The regulations will increase supervision of the crypto industry, which has so far has faced minimal oversight despitea boom in popularity linked to social media influencersanda legitimisatio...",
+      "source": "The Guardian Business",
+      "url": "https://www.theguardian.com/technology/2026/jun/30/crypto-firms-sweeping-new-rules-uk-fca-regulator",
+      "published_at": "2026-06-29T23:01:31+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Nationwide to cut 600 jobs in first redundancies after takeover of Virgin Money",
+      "summary": "Exclusive: Move affects staff of both companies whose roles will be duplicated once operations are mergedNationwide building society is axing 600 jobs in the first major round of cuts linked to its controversialtakeover of the high street bank Virgin Money.The move affects Nationwide and Virgin Money staff, whose roles are due to be duplicated once the lenders’ operations are fully merged.Continue reading...",
+      "source": "The Guardian Business",
+      "url": "https://www.theguardian.com/business/2026/jun/29/nationwide-cut-600-jobs-first-redundancies-takeover-virgin-money",
+      "published_at": "2026-06-29T15:29:42+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Good for business – or profit at any cost? The controversial side of private equity – a visual explainer",
+      "summary": "While it can transform firms for better or worse, the use of private equity in essential services is attracting scrutiny. Here we examine some of its more contentious elements in the UK veterinary sectorPrivate equity could be the two most controversial words in business. For its supporters, it can bring investment, expertise and efficiency to a company. For critics, it is a one way ticket to profiteering, cutting costs and losing staff.The arguments over private equity are particularly fierc...",
+      "source": "The Guardian Business",
+      "url": "https://www.theguardian.com/business/ng-interactive/2026/jun/29/private-equity-visual-explainer-uk-veterinary-sector",
+      "published_at": "2026-06-29T06:00:33+00:00",
+      "region": "world"
+    }
+  ],
+  "word_of_the_day": {
+    "word": "hermetic",
+    "phonetic": "/hə(ɹ)ˈmɛtɪk/",
+    "part_of_speech": "adjective",
+    "definition": "(chiefly with capital initial) Pertaining to Hermes Trismegistus or the writings attributed to him.",
+    "example": "",
+    "source": "free_dictionary_api"
+  },
+  "the_bag_check": {
+    "source": "mfapi_fallback",
+    "as_of": "2026-06-30",
+    "funds": [
+      {
+        "name": "DSP Nifty Next 50 Index Fund - Direct Plan - Growth",
+        "scheme_code": "146381",
+        "nav": 28.2716,
+        "prev_nav": 28.5442,
+        "nav_date": "29-06-2026",
+        "daily_change_pct": -0.96,
+        "trend": "down"
+      },
+      {
+        "name": "Nippon India Small Cap Fund - Direct Plan Growth Plan - Growth Option",
+        "scheme_code": "118778",
+        "nav": 202.4988,
+        "prev_nav": 202.8225,
+        "nav_date": "29-06-2026",
+        "daily_change_pct": -0.16,
+        "trend": "down"
+      },
+      {
+        "name": "HDFC Mid Cap Fund - Growth Option - Direct Plan",
+        "scheme_code": "118989",
+        "nav": 225.317,
+        "prev_nav": 226.915,
+        "nav_date": "29-06-2026",
+        "daily_change_pct": -0.7,
+        "trend": "down"
+      },
+      {
+        "name": "HDFC Liquid Fund - Growth Option - Direct Plan",
+        "scheme_code": "119091",
+        "nav": 5504.9057,
+        "prev_nav": 5504.2842,
+        "nav_date": "29-06-2026",
+        "daily_change_pct": 0.01,
+        "trend": "up"
+      },
+      {
+        "name": "Axis Liquid Fund - Direct Plan - Growth Option",
+        "scheme_code": "120389",
+        "nav": 3119.4457,
+        "prev_nav": 3119.0989,
+        "nav_date": "29-06-2026",
+        "daily_change_pct": 0.01,
+        "trend": "up"
+      }
+    ],
+    "overall_sentiment": "neutral"
+  }
+}

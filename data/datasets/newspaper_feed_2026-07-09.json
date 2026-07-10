@@ -1,0 +1,325 @@
+{
+  "metadata": {
+    "generated_at": "2026-07-09T20:26:40.357696+05:30",
+    "edition_date": "2026-07-09",
+    "generator": "news_fetcher.py v1.0",
+    "fetch_status": {
+      "domestic_tea": "success",
+      "global_gossip": "success",
+      "word_of_the_day": "success",
+      "the_bag_check": "fallback"
+    }
+  },
+  "domestic_tea": [
+    {
+      "headline": "Kambala at Mysuru Dasara will dilute festival’s heritage, claim organisations",
+      "summary": "",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/karnataka/kambala-at-mysuru-dasara-will-dilute-festivals-heritage-claim-organisations/article71202471.ece",
+      "published_at": "2026-07-09T14:50:01+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Railway gatekeeper honoured for saving a man’s life at Sirkazi",
+      "summary": "",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/cities/Tiruchirapalli/railway-gatekeeper-honoured-for-saving-a-mans-life-at-sirkazi/article71202797.ece",
+      "published_at": "2026-07-09T14:49:17+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Confusion over errors in filling enumeration forms",
+      "summary": "",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/telangana/confusion-over-errors-in-filling-enumeration-forms/article71202867.ece",
+      "published_at": "2026-07-09T14:48:13+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Students from aided college miss exam; academicians allege negligence by PU, college, seek re-exam",
+      "summary": "College allegedly fails to inform B.A. students about a paper on English for business, did not allocate classes and university did not detect the lapse; students now told to appear for the exam as an additional paper in the fifth semester",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/cities/Coimbatore/students-from-aided-college-miss-exam-academicians-allege-negligence-by-pu-college-seek-re-exam/article71202143.ece",
+      "published_at": "2026-07-09T14:45:11+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Congress alleges forged gram sabha consent for Singrauli mining in Madhya Pradesh",
+      "summary": "The party claims consent obtained through forged resolutions carrying thumb impressions of deceased persons and demands a CBI probe",
+      "source": "The Hindu",
+      "url": "https://www.thehindu.com/news/national/congress-alleges-forged-gram-sabha-consent-for-singrauli-mining-in-madhya-pradesh/article71202685.ece",
+      "published_at": "2026-07-09T14:44:55+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "The Daily Catch-Up: Your 3-minute evening briefing",
+      "summary": "",
+      "source": "Indian Express",
+      "url": "https://indianexpress.com/article/india/daily-catch-up-operation-hardball-e20-petrol-hotel-scam-wayanad-landslide-10779198/",
+      "published_at": "2026-07-09T13:47:42+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Screen every book you have for objectionable content: J&K government’s order to schools and coaching centres",
+      "summary": "",
+      "source": "Indian Express",
+      "url": "https://indianexpress.com/article/india/book-objectionable-content-jammu-and-kashmur-government-order-schools-coaching-centres-10779131/",
+      "published_at": "2026-07-09T13:04:30+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Rs 6,000-crore betting app case: Accused traced to Oman, ED seeks extradition",
+      "summary": "",
+      "source": "Indian Express",
+      "url": "https://indianexpress.com/article/india/saurabh-chandrakar-mahadev-betting-app-oman-extradition-dubay-villas-seized-10778978/",
+      "published_at": "2026-07-09T12:25:43+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Despite ‘major challenge’ of US tariffs, India’s seafood export hits all-time high",
+      "summary": "",
+      "source": "Indian Express",
+      "url": "https://indianexpress.com/article/india/india-seafood-shrimp-export-record-us-tariff-high-seas-fishing-10778743/",
+      "published_at": "2026-07-09T09:33:54+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Over 100-year-old clock tower at Kerala’s Kozhikode railway station collapses due to heavy rain",
+      "summary": "",
+      "source": "Indian Express",
+      "url": "https://indianexpress.com/article/india/kozhikode-railway-station-clock-tower-collapse-heavy-rain-kerala-10778610/",
+      "published_at": "2026-07-09T09:05:45+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "El Nino could become one of history's strongest, impacting India, Australia, the US, weather agency warns",
+      "summary": "El Niño is closely watched by traders, markets and governments because it offers seasonal insight into weather extremes that can trigger floods, droughts, cold snaps and alter hurricane and typhoon activity across the Atlantic and Pacific.",
+      "source": "Livemint",
+      "url": "https://www.livemint.com/news/us-news/el-nino-could-become-one-of-historys-strongest-impacting-india-australia-the-us-weather-agency-warns-11783607295977.html",
+      "published_at": "2026-07-09T14:41:51+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Quote of the day by Abraham Lincoln: ‘The struggle of today is not altogether for today…’",
+      "summary": "The quote suggests that real and lasting change takes time. The challenges people face in their education, careers, communities or personal lives may seem difficult now, but they can create opportunities and progress in the years ahead.",
+      "source": "Livemint",
+      "url": "https://www.livemint.com/news/us-news/quote-of-the-day-by-abraham-lincoln-the-struggle-of-today-is-not-altogether-for-today-11783604871837.html",
+      "published_at": "2026-07-09T14:23:37+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "Epstein survivors dispute former assistant Lesley Groff's testimony before Congress: Report",
+      "summary": "Groff, who worked as Epstein's assistant for 18 years, told lawmakers on June 9 that she had never met the girls and young women who gave massages to Epstein, did not know their ages or backgrounds, and was unaware of Epstein's abuse.",
+      "source": "Livemint",
+      "url": "https://www.livemint.com/news/us-news/epstein-survivors-dispute-former-assistant-lesley-groffs-testimony-before-congress-report-11783606053191.html",
+      "published_at": "2026-07-09T14:16:44+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "China factory fire claims at least 28 lives; Xi Jinping says ‘heavy human losses’",
+      "summary": "A fire at a shoe factory in Fujian province, China, resulted in at least 28 fatalities, as reported by state media. The incident prompted a significant firefighting effort, with fears that people remained trapped inside the building.",
+      "source": "Livemint",
+      "url": "https://www.livemint.com/news/world/china-factory-fire-claims-at-least-28-lives-says-state-media-11783605875624.html",
+      "published_at": "2026-07-09T14:06:05+05:30",
+      "category": "national"
+    },
+    {
+      "headline": "₹6000 crore Mahadev betting app case: CBI files six chargesheets, names ‘mastermind’ Saurabh Chandrakar and Ravi Uppal",
+      "summary": "The CBI filed six chargesheets in the alleged  ₹6,000 crore Mahadev betting app scam, naming ‘mastermind’ Saurabh Chandrakar, Ravi Uppal and others. It comes as Indian authorities continue efforts to bring Chandrakar back from Oman, where he was detained early last month, officials said.",
+      "source": "Livemint",
+      "url": "https://www.livemint.com/news/india/rs-6000-crore-mahadev-betting-app-case-cbi-files-six-chargesheets-names-mastermind-saurabh-chandrakar-ravi-uppal-11783600323862.html",
+      "published_at": "2026-07-09T13:42:33+05:30",
+      "category": "national"
+    }
+  ],
+  "global_gossip": [
+    {
+      "headline": "Iran launches more strikes after accusing US of striking near nuclear plant",
+      "summary": "Centcom says it hit 90 Iranian targets in the latest round of strikes, with the Iranian health ministry saying 14 people were killed since Tuesday.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/cz75zjj5wp8o?at_medium=RSS&at_campaign=rss",
+      "published_at": "2026-07-09T13:29:56+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Traffic through Strait of Hormuz falls steeply after new US-Iran strikes",
+      "summary": "Data shows a decline in the number of ships - many carrying oil and gas - going through the waterway after attacks this week.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/c621k5r8764o?at_medium=RSS&at_campaign=rss",
+      "published_at": "2026-07-09T14:41:54+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Democrat Graham Platner suspends campaign for key US Senate race after assault allegation",
+      "summary": "The decision came days after a woman accused him of sexual assault, an accusation he says is \"categorically false\".",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/c9v229434p2o?at_medium=RSS&at_campaign=rss",
+      "published_at": "2026-07-09T14:37:19+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Factory fire kills at least 28 in China's 'shoe capital', state media reports",
+      "summary": "Footage shows huge flames rising from a building and thick, black smoke rising into the sky.",
+      "source": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/cx2vz51v2pjo?at_medium=RSS&at_campaign=rss",
+      "published_at": "2026-07-09T14:52:59+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Italy expels Russian diplomats suspected of running spy ring",
+      "summary": "Expulsion comes after arrest of two retired Italian officers who allegedly passed on information to Moscow",
+      "source": "Financial Times",
+      "url": "https://www.ft.com/content/9268f8b9-4fb5-4625-943b-dcb42064eb12",
+      "published_at": "2026-07-09T14:21:57+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "US strikes Iranian railway bridges on route to city of Khamenei’s burial",
+      "summary": "Late supreme leader set to be interred in Mashhad on Thursday",
+      "source": "Financial Times",
+      "url": "https://www.ft.com/content/4b1df8e8-cc24-4991-a900-cde0d25f0f68",
+      "published_at": "2026-07-09T14:11:15+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Polestar chief says globalisation for carmakers is over after US sales ban",
+      "summary": "Swedish group majority-owned by China’s Geely is barred from selling new EVs in the US from next year",
+      "source": "Financial Times",
+      "url": "https://www.ft.com/content/b647f063-2c23-4fa5-9e82-e88e59108156",
+      "published_at": "2026-07-09T13:51:58+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Labour MPs queue up to back Burnham as next leader",
+      "summary": "Former Manchester mayor moves a step closer to being Britain’s next prime minister",
+      "source": "Financial Times",
+      "url": "https://www.ft.com/content/d37940d1-9993-49cd-9f76-cf69cd6f71dd",
+      "published_at": "2026-07-09T13:10:11+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "LGBTQ+ cruise ship refused entry to Egypt days after Turkey turned it away",
+      "summary": "Scarlet Lady’s 2,000 passengers told of change as one of those onboard says they will ‘sparkle and spend elsewhere’An LGBTQ+ cruise ship blocked from Turkish waters this week has been refused entry into Egypt.The Scarlet Lady’s 2,000 passengers, including the Broadway performerPatti LuPone, woke on Thursday morning to find a note placed under their cabin doors informing them that the ship was urgently looking for alternative ports.Continue reading...",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/jul/09/lgbtq-cruise-ship-refused-entry-egypt-turkey",
+      "published_at": "2026-07-09T12:59:24+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Species’ ingenious survival strategies no match for human destruction, red list reveals",
+      "summary": "Newly endangered animals include desert frogs and snails in extreme ocean depths, both threatened by miningLife has colonised every corner of the planet by evolving ingenious survival strategies but these are increasingly being overwhelmed by destructive human activities, this year’s red list of endangered species has revealed.Many snails, limpets and clams have adapted to life at crushing depths in the oceans on hydrothermal vents where water temperatures can reach 450C (842F). But an assess...",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/environment/2026/jul/09/species-ingenious-survival-strategies-no-match-human-destruction-red-list",
+      "published_at": "2026-07-09T12:20:09+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Catnip lotion as effective as Deet at repelling mosquitoes, study finds",
+      "summary": "Researchers testing a cheap, homegrown oil in Uganda found what cats knew all along – it worked as well as the artificial chemical used globallyA homegrown catnip lotion has proven “just as effective as Deet” as a mosquito repellant in trials carried out in Uganda.Catnip, orNepeta cataria, is a common herb from the mint family. The chemical in the plant that causes feline euphoria – nepetalactone – also has insect-repelling properties but this has not previously been commercialised.Continue r...",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/global-development/2026/jul/07/catnip-lotion-as-effective-as-deet-at-repelling-mosquitoes-study-finds",
+      "published_at": "2026-07-07T15:17:19+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "What will define Elon Musk’s legacy? Doge cuts to USAID Ebola programs",
+      "summary": "Experts say cuts have hindered the response to DRC’s Ebola outbreak and resulted in ‘significant numbers’ of deathsElon Musk has an Ebola problem. SpaceX stock dropped precipitously after its initial public offering, and Tesla faces a wave of lawsuits. But instead of focusing on his companies, Musk has posted frequently on X about the US Agency for International Development (USAID), which he helped dismantle – or, in his words, feed into the woodchipper – last year.“Elon’s USAID crash-out ove...",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/jul/07/elon-musk-doge-cuts-usaid-ebola",
+      "published_at": "2026-07-07T11:00:06+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Great Britain’s grid operator issues fresh warning over power supplies in heatwave",
+      "summary": "Neso asks for extra supplies from electricity generators to cope with added demand on Thursday nightGreat Britain’s energy system operator has warned that “extreme temperatures” could hit power supplies on Thursday night, as the UK entered its third heatwave of the year.The National Energy System Operator (Neso) issued a notice overnight asking for extra supplies from power generators to cope with the added demand from households turning on fans and air conditioners to cope with the high temp...",
+      "source": "The Guardian Business",
+      "url": "https://www.theguardian.com/environment/2026/jul/09/great-britain-grid-operator-issues-another-warning-over-power-supplies-in-heatwave",
+      "published_at": "2026-07-09T07:48:35+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Andy Burnham urged to scrap income tax and NI in radical fiscal overhaul",
+      "summary": "Economists including Jim O’Neill write open letter calling for single levy to replace six key taxes to raise money for public servicesUK politics live – latest updatesProminent economists including Jim O’Neill, an ally of Andy Burnham, are urging the MP for Makerfield to pursue radical tax and spending reform to “unlock the gridlock that plagues the country” when he is confirmed as prime minister.O’Neill joins Jonathan Portes, an economics professor at King’s College London, and Danny Sriskan...",
+      "source": "The Guardian Business",
+      "url": "https://www.theguardian.com/business/2026/jul/09/andy-burnham-scrap-income-tax-national-insurance-fiscal-overhaul",
+      "published_at": "2026-07-09T13:27:57+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Invest in Britain or I’ll force you to, minister tells pension funds",
+      "summary": "Business secretary Peter Kyle says asset managers should feel a patriotic duty to make the UK a successBusiness live – latest updatesThe business secretary, Peter Kyle, has told UK pension funds to “get off their high horses” and invest in Britain or be forced to do so by law.Expressing frustration at the level of investment in British companies after years of government initiatives, Kyle said the UK’s biggest asset managers “should feel a patriotic duty in making Britain a success”.Continue ...",
+      "source": "The Guardian Business",
+      "url": "https://www.theguardian.com/business/2026/jul/09/invest-in-britain-force-you-peter-kyle-pension-funds",
+      "published_at": "2026-07-09T12:13:07+00:00",
+      "region": "world"
+    },
+    {
+      "headline": "Five pressing questions for Reform UK about its finances",
+      "summary": "Questions swirl about origins of gifts, loans and donations as even party supporters wonder if it can weather the stormUK politics live – latest updatesWhy is Farage quitting as an MP, only to stand again?Scrutiny is mounting on Reform UK’s finances.On Tuesday, amid an investigation by parliamentary standards into an undisclosed £5m gift, Nigel Farage announced he would resign and trigger a byelection in his constituency of Clacton-on-Sea.Continue reading...",
+      "source": "The Guardian Business",
+      "url": "https://www.theguardian.com/politics/2026/jul/09/five-pressing-questions-farage-reform-uk-finances",
+      "published_at": "2026-07-09T13:45:27+00:00",
+      "region": "world"
+    }
+  ],
+  "word_of_the_day": {
+    "word": "demure",
+    "phonetic": "/dɪˈmjʊə(ɹ)/",
+    "part_of_speech": "verb",
+    "definition": "To look demurely.",
+    "example": "",
+    "source": "free_dictionary_api"
+  },
+  "the_bag_check": {
+    "source": "mfapi_fallback",
+    "as_of": "2026-07-09",
+    "funds": [
+      {
+        "name": "DSP Nifty Next 50 Index Fund - Direct Plan - Growth",
+        "scheme_code": "146381",
+        "nav": 28.0398,
+        "prev_nav": 28.569,
+        "nav_date": "08-07-2026",
+        "daily_change_pct": -1.85,
+        "trend": "down"
+      },
+      {
+        "name": "Nippon India Small Cap Fund - Direct Plan Growth Plan - Growth Option",
+        "scheme_code": "118778",
+        "nav": 199.2592,
+        "prev_nav": 202.9875,
+        "nav_date": "08-07-2026",
+        "daily_change_pct": -1.84,
+        "trend": "down"
+      },
+      {
+        "name": "HDFC Mid Cap Fund - Growth Option - Direct Plan",
+        "scheme_code": "118989",
+        "nav": 226.564,
+        "prev_nav": 231.094,
+        "nav_date": "08-07-2026",
+        "daily_change_pct": -1.96,
+        "trend": "down"
+      },
+      {
+        "name": "HDFC Liquid Fund - Growth Option - Direct Plan",
+        "scheme_code": "119091",
+        "nav": 5514.3735,
+        "prev_nav": 5513.7977,
+        "nav_date": "08-07-2026",
+        "daily_change_pct": 0.01,
+        "trend": "up"
+      },
+      {
+        "name": "Axis Liquid Fund - Direct Plan - Growth Option",
+        "scheme_code": "120389",
+        "nav": 3125.0427,
+        "prev_nav": 3124.7407,
+        "nav_date": "08-07-2026",
+        "daily_change_pct": 0.01,
+        "trend": "up"
+      }
+    ],
+    "overall_sentiment": "red"
+  }
+}

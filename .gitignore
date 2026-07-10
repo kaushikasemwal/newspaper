@@ -1,0 +1,35 @@
+# Environment & secrets
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Virtual environment
+.venv/
+
+# Tool configs
+.cursor/
+.jetro/
+.gemini/
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Generated data (optional — uncomment to ignore output JSONs)
+# data/datasets/*.json
