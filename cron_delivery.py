@@ -140,7 +140,7 @@ def run_step(script_path: Path, step_name: str, extra_args: list = None) -> bool
             text=True,
             encoding="utf-8",
             errors="replace",
-            timeout=300,  # 5 minute timeout per step
+            timeout=600,  # 10 minute timeout (was 5) — allows for retries/backoff
         )
 
         # Log stdout (last 30 lines to avoid flooding)
@@ -582,7 +582,12 @@ def run_full_pipeline() -> bool:
         log.error("Pipeline aborted: content generation failed.")
         send_failure_notification(
             "Content Generation",
-            "content_generator.py failed. Check LLM API key and feed data."
+            "content_generator.py exited with an error — all configured "
+            "Gemini API keys may be exhausted/unavailable, and OpenAI "
+            "fallback also failed (or not configured). Check "
+            "data/logs/cron_delivery.log for which sections failed. "
+            "Add another Gemini key, configure OPENAI_API_KEY in .env, "
+            "or wait for quota/capacity reset."
         )
         _log_summary(results, now)
         return False
@@ -862,14 +867,24 @@ def preflight_check():
     if not SMTP_PASSWORD:
         issues.append("GMAIL_APP_PASSWORD not set in .env")
 
-    # Check LLM API keys (dual Gemini key support)
+    # Check LLM API keys (up to 5 Gemini keys supported)
     gk1 = os.getenv("GEMINI_API_KEY_1", "").strip()
     gk2 = os.getenv("GEMINI_API_KEY_2", "").strip()
+    gk3 = os.getenv("GEMINI_API_KEY_3", "").strip()
+    gk4 = os.getenv("GEMINI_API_KEY_4", "").strip()
+    gk5 = os.getenv("GEMINI_API_KEY_5", "").strip()
     gk_legacy = os.getenv("GEMINI_API_KEY", "").strip()
-    gemini_keys = [k for k in [gk1, gk2, gk_legacy] if k]
+    gemini_keys = [k for k in [gk1, gk2, gk3, gk4, gk5, gk_legacy] if k]
+    if not gemini_keys:
+        issues.append("No Gemini API key set (GEMINI_API_KEY_1 / _2 / _3 / _4 / _5)")
+
+    # Check OpenAI fallback key
     openai_key = os.getenv("OPENAI_API_KEY", "").strip()
-    if not gemini_keys and not openai_key:
-        issues.append("No LLM API key set (GEMINI_API_KEY_1, GEMINI_API_KEY_2, or OPENAI_API_KEY)")
+    has_openai = bool(openai_key)
+
+    # Check NVIDIA fallback key
+    nvidia_key = os.getenv("NVIDIA_API_KEY", "").strip()
+    has_nvidia = bool(nvidia_key)
 
     # Check delivery recipient
     if not DELIVERY_TO:
@@ -897,8 +912,10 @@ def preflight_check():
         if gemini_keys:
             key_count = len(set(gemini_keys))
             log.info(f"  LLM:       Gemini ({key_count} key{'s' if key_count > 1 else ''} configured)")
-        elif openai_key:
-            log.info(f"  LLM:       OpenAI")
+        if has_openai:
+            log.info(f"  LLM Fallback: OpenAI ({os.getenv('OPENAI_MODEL', 'gpt-4o-mini')})")
+        if has_nvidia:
+            log.info(f"  LLM Fallback: NVIDIA NIM ({os.getenv('NVIDIA_MODEL', 'nvidia/nemotron-3-ultra')})")
         return True
 
 

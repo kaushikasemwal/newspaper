@@ -42,14 +42,16 @@ except ImportError:
     sys.exit(1)
 
 try:
-    import google.generativeai as genai
+    from google import genai
+    from google.genai import types
 except ImportError:
     genai = None
+    types = None
 
 try:
-    import anthropic
+    from openai import OpenAI
 except ImportError:
-    anthropic = None
+    OpenAI = None
 
 # -- Load environment ------------------------------------------------------
 load_dotenv(Path(__file__).parent / ".env")
@@ -81,20 +83,26 @@ FEED_DIR = Path(os.getenv("OUTPUT_DIR", str(SCRIPT_DIR / "data" / "datasets")))
 OUTPUT_DIR = SCRIPT_DIR / "data" / "editions"
 
 # -- LLM Config -----------------------------------------------------------
-# Load dual Gemini keys (fall back to legacy single-key var for compat)
-_gk1 = os.getenv("GEMINI_API_KEY_1", "").strip()
-_gk2 = os.getenv("GEMINI_API_KEY_2", "").strip()
-_gk_legacy = os.getenv("GEMINI_API_KEY", "").strip()
+# Load all Gemini keys from environment variables dynamically (e.g., GEMINI_API_KEY_1, GEMINI_API_KEY_5, etc.)
+GEMINI_API_KEYS = []
+for k, v in os.environ.items():
+    if k.startswith("GEMINI_API_KEY") and v.strip():
+        GEMINI_API_KEYS.append(v.strip())
 
-GEMINI_API_KEYS = [k for k in [_gk1, _gk2, _gk_legacy] if k]
 # Deduplicate while preserving order
 GEMINI_API_KEYS = list(dict.fromkeys(GEMINI_API_KEYS))
 
-CLAUDE_API_KEY = os.getenv("CLAUDE_API_KEY", "").strip()
+# Gemini model
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.6-flash")
 
-# Gemini model (free tier: gemini-2.0-flash)
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
-CLAUDE_MODEL = os.getenv("CLAUDE_MODEL", "claude-sonnet-4-20250514")
+# OpenAI fallback
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+
+# NVIDIA NIM fallback (OpenAI-compatible API)
+NVIDIA_API_KEY = os.getenv("NVIDIA_API_KEY", "").strip()
+NVIDIA_MODEL = os.getenv("NVIDIA_MODEL", "nvidia/nemotron-3-ultra")
+NVIDIA_BASE_URL = os.getenv("NVIDIA_BASE_URL", "https://integrate.api.nvidia.com/v1")
 
 # -- Generation params -----------------------------------------------------
 TEMPERATURE = 0.85  # Creative but controlled
@@ -161,16 +169,20 @@ def load_feed(feed_path: Optional[str] = None) -> dict:
 
 class LLMClient:
     """
-    Unified LLM client with multi-key failover.
+    Multi-provider LLM client with failover support.
 
-    Key rotation strategy:
-      1. Try Gemini Key 1 → if 429 quota error → switch to Key 2
-      2. Try Gemini Key 2 → if 429 quota error → fall back to Claude
-      3. Within each key, retry up to 2 times with backoff for transient errors
+    Provider priority:
+      1. Google Gemini (multi-key rotation for quota/rate-limit/capacity errors)
+      2. OpenAI (fallback when all Gemini keys exhausted)
+      3. NVIDIA NIM (final fallback — OpenAI-compatible API)
 
-    Supports:
-      - Google Gemini (primary -- dual-key rotation)
-      - Anthropic Claude (final fallback)
+    Key rotation strategy (Gemini):
+      1. Try Gemini Key 1 → if quota/rate-limit/capacity error → switch to Key 2
+      2. Try Gemini Key 2 → if error → switch to Key 3
+      3. Try Gemini Key 3 → if error → switch to Key 4
+      4. Try Gemini Key 4 → if exhausted, fall back to OpenAI
+      5. If OpenAI fails → fall back to NVIDIA
+      6. Within each key, retry up to 2 times with backoff for transient errors
     """
 
     def __init__(self, system_prompt: str):
@@ -180,11 +192,10 @@ class LLMClient:
         # Gemini multi-key state
         self._gemini_keys = list(GEMINI_API_KEYS)  # copy
         self._current_key_index = 0
-        self._exhausted_keys = set()  # keys that hit daily quota
-        self.model = None
-
-        # Claude state
-        self.claude_client = None
+        self._exhausted_keys = set()  # keys that hit daily quota/capacity
+        self._gemini_client = None  # google-genai Client instance
+        self._openai_client = None  # OpenAI Client instance (for OpenAI & NVIDIA)
+        self._nvidia_client = None  # NVIDIA client (uses OpenAI-compatible API)
 
         self._init_provider()
 
@@ -193,21 +204,42 @@ class LLMClient:
         if not genai or not api_key:
             return False
         try:
-            genai.configure(api_key=api_key)
-            self.model = genai.GenerativeModel(
-                model_name=GEMINI_MODEL,
-                system_instruction=self.system_prompt,
-                generation_config=genai.GenerationConfig(
-                    temperature=TEMPERATURE,
-                    max_output_tokens=MAX_OUTPUT_TOKENS,
-                ),
-            )
+            self._gemini_client = genai.Client(api_key=api_key)
             self.provider = "gemini"
             key_label = self._key_label(api_key)
             log.info(f"LLM provider: Gemini ({GEMINI_MODEL}) — {key_label}")
             return True
         except Exception as e:
             log.warning(f"Gemini init failed for {self._key_label(api_key)}: {e}")
+            return False
+
+    def _init_openai(self) -> bool:
+        """Initialize OpenAI client as fallback."""
+        if not OpenAI or not OPENAI_API_KEY:
+            return False
+        try:
+            self._openai_client = OpenAI(api_key=OPENAI_API_KEY)
+            self.provider = "openai"
+            log.info(f"LLM provider: OpenAI ({OPENAI_MODEL}) — fallback activated")
+            return True
+        except Exception as e:
+            log.warning(f"OpenAI init failed: {e}")
+            return False
+
+    def _init_nvidia(self) -> bool:
+        """Initialize NVIDIA NIM client as final fallback (OpenAI-compatible)."""
+        if not OpenAI or not NVIDIA_API_KEY:
+            return False
+        try:
+            self._nvidia_client = OpenAI(
+                api_key=NVIDIA_API_KEY,
+                base_url=NVIDIA_BASE_URL,
+            )
+            self.provider = "nvidia"
+            log.info(f"LLM provider: NVIDIA NIM ({NVIDIA_MODEL}) — final fallback activated")
+            return True
+        except Exception as e:
+            log.warning(f"NVIDIA init failed: {e}")
             return False
 
     def _key_label(self, key: str) -> str:
@@ -218,67 +250,83 @@ class LLMClient:
         return f"Key {idx} (...{key[-4:]})"
 
     def _init_provider(self):
-        """Initialize the best available LLM provider."""
+        """Initialize the best available provider (Gemini → OpenAI → NVIDIA)."""
         # Try Gemini keys in order
         for i, key in enumerate(self._gemini_keys):
             if self._init_gemini(key):
                 self._current_key_index = i
                 return
 
-        # Try Claude as fallback
-        if CLAUDE_API_KEY and anthropic:
-            try:
-                self.claude_client = anthropic.Anthropic(api_key=CLAUDE_API_KEY)
-                self.provider = "claude"
-                log.info(f"LLM provider: Claude ({CLAUDE_MODEL})")
-                return
-            except Exception as e:
-                log.warning(f"Claude init failed: {e}")
+        # All Gemini keys failed — try OpenAI fallback
+        log.warning("All Gemini keys unavailable, attempting OpenAI fallback...")
+        if self._init_openai():
+            return
+
+        # OpenAI failed — try NVIDIA fallback
+        log.warning("OpenAI unavailable, attempting NVIDIA NIM fallback...")
+        if self._init_nvidia():
+            return
 
         log.error(
             "No LLM provider available!\n"
-            "  Add GEMINI_API_KEY_1 / GEMINI_API_KEY_2 or CLAUDE_API_KEY to .env\n"
+            "  Add GEMINI_API_KEY_1 / _2 / _3 / _4 / _5 to .env\n"
             "  Gemini: https://aistudio.google.com/apikey (free)\n"
-            "  Claude: https://console.anthropic.com/settings/keys"
+            "  Or add OPENAI_API_KEY to .env for fallback\n"
+            "  Or add NVIDIA_API_KEY to .env for NVIDIA NIM fallback"
         )
         sys.exit(1)
 
     def _switch_to_next_gemini_key(self) -> bool:
         """
-        Rotate to the next available Gemini key.
-        Returns True if a new key was activated, False if all keys are exhausted.
+        Rotate to the next available provider/key.
+        Returns True if a new provider was activated, False if all exhausted.
         """
-        # Mark current key as exhausted
-        if self._current_key_index < len(self._gemini_keys):
-            exhausted_key = self._gemini_keys[self._current_key_index]
-            self._exhausted_keys.add(exhausted_key)
-            log.warning(f"  Marking {self._key_label(exhausted_key)} as exhausted (quota hit)")
+        # If currently on Gemini, try next Gemini key
+        if self.provider == "gemini":
+            # Mark current key as exhausted
+            if self._current_key_index < len(self._gemini_keys):
+                exhausted_key = self._gemini_keys[self._current_key_index]
+                self._exhausted_keys.add(exhausted_key)
+                log.warning(f"  Marking {self._key_label(exhausted_key)} as exhausted (quota/capacity hit)")
 
-        # Try each remaining key
-        for i, key in enumerate(self._gemini_keys):
-            if key not in self._exhausted_keys:
-                log.info(f"  Switching to Gemini {self._key_label(key)}...")
-                if self._init_gemini(key):
-                    self._current_key_index = i
-                    return True
+            # Try each remaining Gemini key
+            for i, key in enumerate(self._gemini_keys):
+                if key not in self._exhausted_keys:
+                    log.info(f"  Switching to Gemini {self._key_label(key)}...")
+                    if self._init_gemini(key):
+                        self._current_key_index = i
+                        return True
 
-        # All Gemini keys exhausted — try Claude
-        if CLAUDE_API_KEY and anthropic and self.provider != "claude":
-            log.warning("  All Gemini keys exhausted. Falling back to Claude...")
-            try:
-                self.claude_client = anthropic.Anthropic(api_key=CLAUDE_API_KEY)
-                self.provider = "claude"
-                log.info(f"  Switched to Claude ({CLAUDE_MODEL})")
+            # All Gemini keys exhausted — try OpenAI
+            log.warning("All Gemini keys exhausted, attempting OpenAI fallback...")
+            if self._init_openai():
                 return True
-            except Exception as e:
-                log.error(f"  Claude fallback failed: {e}")
+
+        # If currently on OpenAI, try NVIDIA
+        if self.provider == "openai":
+            log.warning("OpenAI exhausted, attempting NVIDIA NIM fallback...")
+            if self._init_nvidia():
+                return True
+
+        # If currently on NVIDIA, no more fallbacks
+        if self.provider == "nvidia":
+            log.warning("NVIDIA NIM exhausted, no more fallbacks available.")
+            return False
 
         return False
 
     def _is_quota_error(self, error_str: str) -> bool:
-        """Check if an error is a quota/rate-limit error."""
+        """Check if an error is a quota/rate-limit/capacity error."""
         lower = error_str.lower()
-        return "429" in error_str or "quota" in lower or "rate limit" in lower
+        return (
+            "429" in error_str
+            or "quota" in lower
+            or "rate limit" in lower
+            or "503" in error_str
+            or "unavailable" in lower
+            or "high demand" in lower
+            or "capacity" in lower
+        )
 
     def _is_daily_quota_error(self, error_str: str) -> bool:
         """Check if the error is specifically a DAILY quota exhaust (not per-minute)."""
@@ -287,12 +335,14 @@ class LLMClient:
 
     def generate(self, prompt: str, section_name: str = "") -> str:
         """
-        Generate content with automatic key failover and retry.
+        Generate content with automatic provider failover and retry.
 
         Strategy:
-          1. Try current key (up to 2 retries for transient rate limits)
-          2. If daily quota exhausted → switch to next key and retry immediately
+          1. Try current provider/key (up to 2 retries for transient rate limits)
+          2. If quota/rate-limit/capacity error → switch to next Gemini key
           3. If all Gemini keys exhausted → fall back to OpenAI
+          4. If OpenAI fails → fall back to NVIDIA NIM
+          5. If all providers exhausted → give up
         """
         import time as _time
 
@@ -302,28 +352,48 @@ class LLMClient:
         max_retries_per_key = 2
         base_delay = 10  # seconds
 
-        # Outer loop: try each available key
-        keys_tried = 0
-        max_key_switches = len(self._gemini_keys) + 1  # +1 for OpenAI fallback
+        # Outer loop: try each available provider/key
+        # We allow: all Gemini keys + OpenAI fallback + NVIDIA fallback
+        max_provider_switches = len(self._gemini_keys) + (1 if OPENAI_API_KEY else 0) + (1 if NVIDIA_API_KEY else 0)
+        provider_switches = 0
 
-        while keys_tried < max_key_switches:
-            # Inner loop: retry within the current key
+        while provider_switches < max_provider_switches:
+            # Inner loop: retry within the current provider
             for attempt in range(1, max_retries_per_key + 1):
                 try:
                     if self.provider == "gemini":
-                        response = self.model.generate_content(prompt)
+                        response = self._gemini_client.models.generate_content(
+                            model=GEMINI_MODEL,
+                            contents=prompt,
+                            config=types.GenerateContentConfig(
+                                system_instruction=self.system_prompt,
+                                temperature=TEMPERATURE,
+                                max_output_tokens=MAX_OUTPUT_TOKENS,
+                            ),
+                        )
                         text = response.text
-                    elif self.provider == "claude":
-                        response = self.claude_client.messages.create(
-                            model=CLAUDE_MODEL,
-                            system=self.system_prompt,
+                    elif self.provider == "openai":
+                        response = self._openai_client.chat.completions.create(
+                            model=OPENAI_MODEL,
                             messages=[
+                                {"role": "system", "content": self.system_prompt},
                                 {"role": "user", "content": prompt},
                             ],
                             temperature=TEMPERATURE,
                             max_tokens=MAX_OUTPUT_TOKENS,
                         )
-                        text = response.content[0].text
+                        text = response.choices[0].message.content
+                    elif self.provider == "nvidia":
+                        response = self._nvidia_client.chat.completions.create(
+                            model=NVIDIA_MODEL,
+                            messages=[
+                                {"role": "system", "content": self.system_prompt},
+                                {"role": "user", "content": prompt},
+                            ],
+                            temperature=TEMPERATURE,
+                            max_tokens=MAX_OUTPUT_TOKENS,
+                        )
+                        text = response.choices[0].message.content
                     else:
                         return "[Generation failed -- no provider]"
 
@@ -340,15 +410,15 @@ class LLMClient:
                     error_str = str(e)
 
                     if self._is_quota_error(error_str):
-                        # Daily quota exhausted → switch key immediately
+                        # Daily quota exhausted → switch provider immediately
                         if self._is_daily_quota_error(error_str):
                             current_label = "current key"
                             if self.provider == "gemini" and self._current_key_index < len(self._gemini_keys):
                                 current_label = self._key_label(self._gemini_keys[self._current_key_index])
                             log.warning(f"  DAILY QUOTA HIT{label} on {current_label}. Switching...")
-                            break  # break inner loop → switch key in outer loop
+                            break  # break inner loop → switch provider in outer loop
 
-                        # Per-minute rate limit → wait and retry same key
+                        # Per-minute rate limit / capacity error → wait and retry same provider
                         retry_delay = base_delay * attempt
                         delay_match = re.search(r"retry in (\d+\.?\d*)", error_str, re.IGNORECASE)
                         if delay_match:
@@ -356,26 +426,26 @@ class LLMClient:
 
                         if attempt < max_retries_per_key:
                             log.warning(
-                                f"  RATE LIMITED{label} (attempt {attempt}/{max_retries_per_key}). "
+                                f"  RATE LIMITED/CAPACITY{label} (attempt {attempt}/{max_retries_per_key}). "
                                 f"Waiting {retry_delay:.0f}s..."
                             )
                             _time.sleep(retry_delay)
                             continue
                         else:
-                            log.warning(f"  Rate limit persists{label}. Switching key...")
-                            break  # break inner loop → switch key
+                            log.warning(f"  Rate limit/capacity persists{label}. Switching provider...")
+                            break  # break inner loop → switch provider
                     else:
                         # Non-quota error — don't retry
                         log.error(f"  FAIL{label}: {e}")
                         return f"[Content generation failed: {e}]"
 
-            # Try switching to the next key
-            keys_tried += 1
+            # Try switching to the next provider
+            provider_switches += 1
             if not self._switch_to_next_gemini_key():
-                log.error(f"  FAIL{label}: All API keys exhausted. No fallback available.")
-                return "[Content generation failed: all API keys exhausted]"
+                log.error(f"  FAIL{label}: All providers exhausted (Gemini keys + OpenAI + NVIDIA fallback).")
+                return "[Content generation failed: all providers exhausted]"
 
-        return "[Content generation failed: all keys and retries exhausted]"
+        return "[Content generation failed: all providers and retries exhausted]"
 
     def _enforce_blacklist(self, text: str) -> str:
         """Final safety net: remove any blacklisted words."""
@@ -707,6 +777,35 @@ def main():
         "No quotation marks.",
         section_name="Footer Quote",
     )
+
+    # -- Step 3b: Verify generation actually succeeded ----------------------
+    # If Gemini quota is exhausted (and no fallback is available/configured),
+    # llm.generate() returns a placeholder string instead of raising. Left
+    # unchecked, that placeholder text gets baked into the HTML and emailed
+    # out as-is. Catch that here and abort loudly instead.
+    FAILURE_MARKERS = ("[Content generation failed", "[Generation failed")
+    sections = {
+        "Morning Brew": morning_brew,
+        "Domestic Dispatch": domestic_news,
+        "Global Gossip": international_news,
+        "Bag Check Vibe": groww_sentiment,
+        "Bag Check Body": groww_updates,
+        "Word Example": word_example,
+        "Hot Take": hot_take,
+        "Footer Quote": footer_quote,
+    }
+    failed_sections = [
+        name for name, text in sections.items()
+        if any(text.startswith(marker) for marker in FAILURE_MARKERS)
+    ]
+    if failed_sections:
+        log.error(
+            f"Aborting: {len(failed_sections)} section(s) failed to generate: "
+            f"{', '.join(failed_sections)}"
+        )
+        log.error(f"  LLM provider at time of failure: {llm.provider}")
+        log.error("  No edition will be written or sent. Check your Gemini quota / keys.")
+        sys.exit(1)
 
     # -- Step 4: Assemble all content --------------------------------------
     log.info("Step 4/5: Assembling content...")

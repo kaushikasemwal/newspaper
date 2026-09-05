@@ -31,5 +31,7 @@ Thumbs.db
 .DS_Store
 desktop.ini
 
-# Generated data (optional — uncomment to ignore output JSONs)
-# data/datasets/*.json
+# Generated data
+data/datasets/*.json
+data/editions/*.html
+data/logs/*.log
